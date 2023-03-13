@@ -57,7 +57,7 @@
                 aria-labelledby="heading{{ loop.index }}" data-bs-parent="#accordionExample">
                 <div class="accordion-body ">
                         <div class="row">
-                            <div class="col-8">
+                            <div class="col-8 recipe-notes">
                                 {{ wmeat.recipe_notes}}
                             </div>
 
@@ -79,7 +79,7 @@
         <!-- if location is a url it applies a button with link, otherwise shows cookbook and page-->
                                 {% if wmeat.recipe_location.startswith("https") %}
                                     <button class="btn btn-primary">
-                                        <a href="{{ wmeat.recipe_location }}" class="text-decoration-none" target="_blank"
+                                        <a href="{{ wmeat.recipe_location }}" class="text-decoration-none text-dark" target="_blank"
                                             role="button">Click for recipe</a>
                                     </button>
                             </div>
