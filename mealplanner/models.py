@@ -40,3 +40,4 @@ class Recipe(db.Model):
         return "#{0} - Recipe: {1} | Cook: {2} hrs/mins".format(
             self.id, self.recipe_name, self.cook_time
         )
+
