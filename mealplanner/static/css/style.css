@@ -41,7 +41,7 @@ i {
 }
 
 .dropdown {
-margin-right: 60px;
+    margin-right: 60px;
 }
 
 .dropdown-menu a:hover{
@@ -149,6 +149,7 @@ margin-right: 60px;
 
 #add-recipe-flash{
     text-align: center;
+    list-style-type: none
 }
 
 

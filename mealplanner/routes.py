@@ -25,7 +25,7 @@ def add_recipe():
     d=timedelta()
     if request.method == "POST":
         recipe = Recipe(
-            recipe_name=request.form.get("recipe_name").capitalize(),
+            recipe_name=request.form.get("recipe_name").title(),
             recipe_notes=request.form.get("recipe_notes").capitalize(),
             cook_time=request.form.get("cook_time"),
             recipe_location=request.form.get("recipe_location"),
