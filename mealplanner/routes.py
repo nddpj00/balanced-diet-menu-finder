@@ -57,6 +57,7 @@ def edit_recipe(recipe_id):
         recipe.cuisine_id = request.form.get("cuisine_id")
         db.session.commit()
         flash('Recipe successfully updated')
+        return redirect(request.referrer)
     return render_template("edit_recipe.html", recipe=recipe, categories=categories, cuisines=cuisines)
 
 @app.route("/delete_recipe/<int:recipe_id>")

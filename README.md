@@ -1,52 +1,87 @@
-<h1 align = "center">Meal Finder!<h/1>
+# [Balanced Diet Meal Finder](https://mealplanner-2.herokuapp.com/)
 
-<h2 align = "center"><img src=""></h2>
+![mockup](mealplanner/wireframes/bdrf-mockup.png)
 
-[View the live project here.]()
+[View the live project here.](https://mealplanner-2.herokuapp.com/)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Ac placerat vestibulum lectus mauris ultrices eros in cursus turpis. Nulla pellentesque dignissim enim sit amet venenatis
- urna cursus. Libero enim sed faucibus turpis in. Adipiscing at in tellus integer feugiat scelerisque varius morbi
+I love food.  I mean I *really* love it.
+
+I love eating food, who doesnt?, but also I love reading about it, I love learning about it and of course I love cooking it too.  As such I took it upon myself to devise a weekly meal plan for my small family and have been doing so for a while.
+
+I aim for the meals to be healthy, balanced, interesting and of course tasty yummo!  Sounds simple right?  
+
+But it not... firstly its very time consuming. 
+
+I turn to my long tried-and-tested recipes which can be found either online, in my numerous cookbooks (which are in no-particular-order), 10 year old scraps of paper pulled from a sunday paper supplements (covered in sauce and flattened tomatoes) or finally, and more recently, in those free binders given to you on your first subscription to Gusto or Hello Fresh.  This all takes time. 
+
+Also, with so much information around about what consists of a balanced, healthy, nutrious diet, it can feel confusing and overwhelming to say the least.  Who really knows if they're eating enough oily fish in their diet??
+
+OK to summarise why I've created the Balanced Diet Meal Finder. 
+- You have all your favourite recipes in one place, saving you time.
+- Categorised into food groups. Vegetarian, White Meat, Red Meat, Oily Fish and White Fish to help you choose a nice balanced diet.
+
+---
 
 ## User Experience (UX)
 
--   ### User stories
+The project was created in order to fulfil the critera of the L5 Diploma in Web Application Development that I'm completing. This is for Unit 3: Back End Development.
 
-    -   #### First-Time Visitor Goals
+The unit aims to provide knowledge and skills needed to build a Back end web application. Topics include data storage and data management using either relational or non-relational databases.
 
-        1. As a First-Time Visitor, I want to 
-        2. As a First-Time Visitor, I want to 
-        3. As a First-Time Visitor, I want to 
+The idea came several years ago but then it was in paper form.  I had started to try and jot down any recipes our family enjoyed, categorised into different food groups. Essentially it was a plastic folder with dividers, separating several bits of paper all with the aim of saving me time, but also ensuring we eat a balanced diet.  
 
-     -  #### Returning Visitor Goals
+This units project criteria was the perfect opportunity to move the data (recipes) on to a user-friendly app!
 
-        1. As a Returning Visitor, I want to 
-        2. As a Returning Visitor, I want to 
-        3. As a Returning Visitor, I want to 
+### User Stories
 
-    -   #### Frequent User Goals
-        1. As a Frequent User, I want to 
-        2. As a Frequent User, I want to 
-        3. As a Frequent User, I want to 
+"**_As a user, I would like to_** _____________________________"
 
--   ### Design
-    -   #### Colour Scheme
-        -   
-    -   #### Typography
-        -  
-    -   #### Imagery
-        -   
+:heavy_check_mark: *denotes items that have been successfully implemented*
 
-*   ### Wireframes
+- :heavy_check_mark: *view the site* from any device *(mobile, tablet, desktop)*.
+- :heavy_check_mark: *view all recipes* as a user.
+- :heavy_check_mark: *add* my own recipes.
+- :heavy_check_mark: *edit* my own recipes.
+- :heavy_check_mark: *delete* my own recipes.
+- :heavy_check_mark: *view* a random recipe from a particular category.
 
-   **Large Screen Wireframe**
-   <img align = "center" width = "300px" height = "750px" src = "">
 
-   **Tablet Screen Wireframe**
-   <img align = "center" width = "250px" height = "600px" src = "">
+### Design  
 
-   **Mobile Screen Wireframe**
-   <img align = "center" width = "200px" height = "600px" src = "">
+#### Colour Scheme
+
+I wanted some vivid colours that come from produce so have I have used avocado green and reddish pinks that I feel compliment each other well.
+- ![#DED369](https://via.placeholder.com/15/DED369/DED369) `#DED369` (**Avocado Green**)
+- ![#F8EFEA](https://via.placeholder.com/15/F8EFEA/F8EFEA) `#F8EFEA` (**Pink**)
+- ![#E0475B](https://via.placeholder.com/15/E0475B/E0475B) `#E0475B` (**Coral**)
+
+#### Typography
+
+- I used [Google Fonts](https://fonts.google.com/) for my application. 
+
+For the front page navbar brand header I used :-
+
+- [Fredoka One](https://fonts.google.com/specimen/Fredoka+One)
+
+For the food group headers, card texts and nav links I used :-
+
+- [Volkhov](https://fonts.google.com/specimen/Volkhov)
+
+#### Icons
+
+- [Font Awesome 6.3.0](https://fontawesome.com/)
+    - These where used for the chilli icons in the navbar and for the individual form fields.
+
+### Wireframes
+
+   **Large Screen Home page Wireframe**
+<img align = "center" width = "300px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes.png">
+
+   **Mobile Screen Home page Wireframe**
+<img align = "center" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-home.png">
+
+   **Large Screen Add Recipe form Wireframe**
+<img align = "center" width = "300px" height = "200px" src = "mealplanner/wireframes/bdrf-addrecipe.png">
 
 ##  Features
 

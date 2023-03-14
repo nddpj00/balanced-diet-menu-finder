@@ -5,6 +5,21 @@
     <h1 class="center-align">Edit Recipe</h1>
 </div>
 
+<div class="row justify-content-center">
+    <div col-6>
+        <!-- Flash message to confirm recipe added -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes id="add-recipe-flash">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            <i class="fa-solid fa-thumbs-up"></i>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
+</div>
 
 
 <div class="container" id="recipeCont">
@@ -56,6 +71,20 @@
             </div>
         </div>
 
+        <!-- cook time -->
+        <div class="row mb-3">
+            <div class="col-1">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class=" col-11">
+                <div class="form-floating">
+                    <input id="cook_time" name="cook_time" value="{{ recipe.cook_time }}" minlength="5" maxlength="5"
+                        type="text" class="form-control" placeholder="cook time" required>
+                    <label for="cook_time" class="form-label">Cook Time HH:MM</label>
+                </div>
+            </div>
+        </div>
+
         <!-- recipe cuisine -->
         <div class="row">
             <div class="col-1">
@@ -98,19 +127,7 @@
         </div>
 
 
-        <!-- cook time -->
-        <div class="row mb-3">
-            <div class="col-1">
-                <i class="fa-solid fa-clock"></i>
-            </div>
-            <div class=" col-4">
-                <div class="form-floating">
-                    <input id="cook_time" name="cook_time" value="{{ recipe.cook_time }}" minlength="5" maxlength="5"
-                        type="text" class="form-control" placeholder="cook time" required>
-                    <label for="cook_time" class="form-label">Cook Time HH:MM</label>
-                </div>
-            </div>
-        </div>
+
 
 
         <!-- family friendly -->
@@ -118,7 +135,7 @@
             <div class="col-1 ">
                 <i class="fa-solid fa-child-reaching"></i>
             </div>
-            <div class="form-check form-switch col-4">
+            <div class="form-check form-switch col-8">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Family-Friendly?</label>
                 {% if recipe.family_friendly == True %}
                 <input class="form-check-input" name="family_friendly" type="checkbox" id="flexSwitchCheckDefault"
@@ -133,7 +150,7 @@
             <div class="col-1 ">
                 <i class="fa-solid fa-heart-pulse"></i>
             </div>
-            <div class="form-check form-switch col-4">
+            <div class="form-check form-switch col-8">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Healthy?</label>
                 {% if recipe.recipe_healthy == True %}
                 <input class="form-check-input" name="recipe_healthy" type="checkbox" id="flexSwitchCheckDefault"
@@ -150,18 +167,7 @@
             <button type="submit" class="btn btn-lg">
                 Save changes <i class="fas fa-plus-square right"></i>
             </button>
-            <div>
-                <!-- Flash message to confirm recipe updated -->
-                {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                <ul class=flashes>
-                    {% for message in messages %}
-                    <li>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-                {% endwith %}
-            </div>
+            
         </div>
 
 
