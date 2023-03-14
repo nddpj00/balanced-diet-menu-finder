@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="container-md main-header">
-  <h1 class="center-align">Food Groups</h1>
+  <h1 class="center-align">Recipe Groups</h1>
 </div>
 
 
@@ -14,12 +14,16 @@
     <div class="ratio ratio-4x3">
       <img src="./static/images/vegetable_card.jpg" class="card-img-top" alt="selection of vegetables laid out on table">
   </div>
-    <div class="card-body">
+    <div class="card-body d-flex flex-column">
       <h5 class="card-title">Vegetarian</h5>
       <p class="card-text">Vegetables are a good source of vitamins and minerals, including folate, vitamin C and
         potassium.
         Excellent source of dietary fibre, which can help to maintain a healthy gut. Reduce your risk of heart
-        disease, stroke and some types of cancer.</p>
+        disease, stroke and some types of cancer.
+      </p>
+        <div class="mt-auto">
+         NHS recommend: <br> 5 a day including fruit. <br> 80g per portions
+        </div>
     </div>
     <!-- Button trigger modal -->
 
@@ -91,9 +95,13 @@
     <div class="ratio ratio-4x3">
     <img src="./static/images/chicken_card.jpg" class="card-img-top" alt="grill pan containing a whole cooked chicken">
     </div>
-    <div class="card-body">
+    <div class="card-body d-flex flex-column">
       <h5 class="card-title">White Meat</h5>
-      <p class="card-text">Chicken and turkey are a good source of lean protein, vitamins and minerals.</p>
+      <p class="card-text">Chicken and turkey are a good source of lean protein, vitamins and minerals.
+      </p>
+      <div class="mt-auto">
+          NHS recommend: <br> Go for turkey and chicken without the skin as lower in fat.
+      </div>
     </div>
     <button type="button" class="btn" onclick="{% set random_wmeat = wmeat_recipe|random %}" data-bs-toggle="modal"
       data-bs-target="#randomWmeatModal">
@@ -129,24 +137,24 @@
           <div class="modal-body">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col">
                   {{ random_wmeat.recipe_notes}}
-                </div>
-                <div class="col-md-4 ms-auto">
-                  <!-- if location starts with url apply click -->
-                  {% if random_wmeat.recipe_location.startswith("https") %}
-                  <button class="btn btn-primary">
-                    <a href="{{ random_wmeat.recipe_location }}" class="text-decoration-none text-dark"
-                        target="_blank" role="button">Clickfor recipe</a>
-                  </button>
-                  {% else %}
-                  {{ random_wmeat.recipe_location }}
-                  {% endif %}
                 </div>
               </div>
 
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary pageRefresh" data-bs-dismiss="modal">Close</button>
+                  <!-- if location starts with url apply click -->
+                  {% if random_wmeat.recipe_location.startswith("https") %}
+                  <button class="btn btn-primary">
+                    <a href="{{ random_wmeat.recipe_location }}" class="text-decoration-none text-dark"
+                        target="_blank" role="button">Click for recipe</a>
+                  </button>
+                  {% else %}
+                  <div class="random-modal-nonurl">
+                  {{ random_wmeat.recipe_location }}
+                  </div>
+                  {% endif %}
+                  <button type="button" class="btn btn-secondary pageRefresh" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -163,10 +171,14 @@
     <div class="ratio ratio-4x3">
     <img src="./static/images/red_meat_card.jpg" class="card-img-top" alt="rare steak fillet on a plate">
     </div>
-    <div class="card-body">
+    <div class="card-body d-flex flex-column">
       <h5 class="card-title">Red Meat</h5>
       <p class="card-text">Red meat provides us with iron, zinc and B vitamins.
-        Meat is one of the main sources of vitamin B12 in the diet. Try to limit red meat to 70g a day.</p>
+        Meat is one of the main sources of vitamin B12 in the diet. 
+      </p>
+      <div class="mt-auto">
+          NHS recommend: <br> Try to limit red meat to 70g a day <br>
+      </div>
 
     </div>
     <button type="button" class="btn" onclick="{%  set random_rmeat = rmeat_recipe|random %}" data-bs-toggle="modal"
@@ -204,25 +216,24 @@
           <div class="modal-body">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col">
                   {{ random_rmeat.recipe_notes}}
-                </div>
-                <div class="col-md-4 ms-auto">
-                  <!-- if location starts with url apply click -->
-                  {% if random_rmeat.recipe_location.startswith("https") %}
-                  <button class="btn btn-primary">
-                    <a href="{{ random_rmeat.recipe_location }}"  class="text-decoration-none text-dark"
-                        target="_blank" role="button">Clickfor recipe</a>
-                  </button>
-                  {% else %}
-                  {{ random_rmeat.recipe_location }}
-                  {% endif %}
                 </div>
               </div>
 
-
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary pageRefresh" data-bs-dismiss="modal">Close</button>
+                  <!-- if location starts with url apply click -->
+                  {% if random_rmeat.recipe_location.startswith("https") %}
+                  <button class="btn btn-primary">
+                    <a href="{{ random_rmeat.recipe_location }}" class="text-decoration-none text-dark"
+                        target="_blank" role="button">Click for recipe</a>
+                  </button>
+                  {% else %}
+                  <div class="random-modal-nonurl">
+                  {{ random_rmeat.recipe_location }}
+                  </div>
+                  {% endif %}
+                  <button type="button" class="btn btn-secondary pageRefresh" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -237,12 +248,16 @@
     <div class="ratio ratio-4x3">
     <img src="./static/images/oilyfish_card.jpg" class="card-img-top" alt="cooked salmon fillet on a plate">
     </div>
-    <div class="card-body">
+    <div class="card-body d-flex flex-column">
       <h5 class="card-title">Oily-Fish</h5>
-      <p class="card-text">A balanced diet should include at least 1 portion of oily fish a week.
-        That's because fish and shellfish are good sources of many vitamins and minerals.
+      <p class="card-text">
+        Fish and shellfish are good sources of many vitamins and minerals.
         Salmon and sardines are particularly high in long-chain omega-3 fatty acids,
-        which help to keep your heart healthy.</p>
+        which help to keep your heart healthy.
+      </p>
+      <div class="mt-auto">
+          NHS recommend: <br> At least 1 portion of oily fish a week <br>
+      </div>  
     </div>
     <button type="button" class="btn" onclick="{%  set random_ofish = ofish_recipe|random %}" data-bs-toggle="modal"
       data-bs-target="#randomOfishModal">
@@ -279,24 +294,24 @@
           <div class="modal-body">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col">
                   {{ random_ofish.recipe_notes}}
-                </div>
-                <div class="col-md-4 ms-auto">
-                  <!-- if location starts with url apply click -->
-                  {% if random_ofish.recipe_location.startswith("https") %}
-                  <button class="btn btn-primary">
-                    <a href="{{ random_ofish.recipe_location }}" class="text-decoration-none text-dark"
-                        target="_blank" role="button">Clickfor recipe</a>
-                  </button>
-                  {% else %}
-                  {{ random_ofish.recipe_location }}
-                  {% endif %}
                 </div>
               </div>
 
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary pageRefresh" data-bs-dismiss="modal">Close</button>
+                  <!-- if location starts with url apply click -->
+                  {% if random_ofish.recipe_location.startswith("https") %}
+                  <button class="btn btn-primary">
+                    <a href="{{ random_ofish.recipe_location }}" class="text-decoration-none text-dark"
+                        target="_blank" role="button">Click for recipe</a>
+                  </button>
+                  {% else %}
+                  <div class="random-modal-nonurl">
+                  {{ random_ofish.recipe_location }}
+                  </div>
+                  {% endif %}
+                  <button type="button" class="btn btn-secondary pageRefresh" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
@@ -309,18 +324,21 @@
   <!-- White-Fish Meal Card, Button and Modal -->
   <div class="card border-light ">
     <div class="ratio ratio-4x3">
-    <img src="./static/images/white_fish_card.jpg" class="card-img-top" alt="plated fish fillet on potatoes">
+      <img src="./static/images/white_fish_card.jpg" class="card-img-top" alt="plated fish fillet on potatoes">
     </div>
-    <div class="card-body">
+    <div class="card-body  d-flex flex-column">
       <h5 class="card-title">White-Fish</h5>
       <p class="card-text">Low in fat. some species can be a source of omega-3 fatty acids, e.g.
-        sea bass, sea bream, turbot, halibut, but at lower levels than oily fish.</p>
-
+        sea bass, sea bream, turbot, halibut, but at lower levels than oily fish.
+      </p>
+      <div class="mt-auto">
+          NHS recommend: <br> At least 2 portions of fish a week, including 1 of oily fish <br>
+      </div>
     </div>
-    <button type="button" class="btn" onclick="{%  set random_wfish = wfish_recipe|random %}" data-bs-toggle="modal"
-      data-bs-target="#randomWfishModal">
-      Get Random recipe!
-    </button>
+      <button type="button" class="btn" onclick="{%  set random_wfish = wfish_recipe|random %}" data-bs-toggle="modal"
+        data-bs-target="#randomWfishModal">
+        Get Random recipe!
+      </button>
 
     <!-- White-Fish Meal Modal -->
     {% if random_wfish %}
@@ -352,23 +370,24 @@
           <div class="modal-body">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col">
                   {{ random_wfish.recipe_notes}}
                 </div>
-                <div class="col-md-4 ms-auto">
+              </div>
+
+              <div class="modal-footer">
                   <!-- if location starts with url apply click -->
                   {% if random_wfish.recipe_location.startswith("https") %}
                   <button class="btn btn-primary">
                     <a href="{{ random_wfish.recipe_location }}" class="text-decoration-none text-dark"
-                        target="_blank" role="button">Clickfor recipe</a>
+                        target="_blank" role="button">Click for recipe</a>
                   </button>
                   {% else %}
+                  <div class="random-modal-nonurl">
                   {{ random_wfish.recipe_location }}
+                  </div>
                   {% endif %}
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary pageRefresh" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary pageRefresh" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
