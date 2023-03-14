@@ -5,7 +5,21 @@
     <h1 class="center-align">Add Recipe</h1>
 </div>
 
-
+<div class="row justify-content-center">
+    <div col-6>
+        <!-- Flash message to confirm recipe added -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes id="add-recipe-flash">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            <i class="fa-solid fa-thumbs-up"></i>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
+</div>
 
 <div class="container" id="recipeCont">
     <form class="row g-3 needs-validation" novalidate method="POST" action="{{ url_for('add_recipe') }}">
@@ -128,19 +142,7 @@
             <button type="submit" class="btn btn-lg">
                 Add Recipe <i class="fas fa-plus-square right"></i>
             </button>
-            <div>
-                <!-- Flash message to confirm recipe added -->
-                {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                <ul class=flashes>
-                    {% for message in messages %}
-                    <li>{{ message }}</li>
-                    <i class="fa-solid fa-thumbs-up"></i>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-                {% endwith %}
-            </div>
+            
         </div>
 
     </form>
