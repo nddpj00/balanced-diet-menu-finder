@@ -64,7 +64,10 @@
                 <div class="col-md-4 ms-auto">
                   <!-- if location starts with url apply click -->
                   {% if random_vegmeal.recipe_location.startswith("https") %}
-                  <a href="{{ random_vegmeal.recipe_location }}" target="_blank">click for recipe.</a>
+                  <button class="btn btn-primary">
+                    <a href="{{ random_vegmeal.recipe_location }}" class="text-decoration-none text-dark"
+                        target="_blank" role="button">Clickfor recipe</a>
+                  </button>
                   {% else %}
                   {{ random_vegmeal.recipe_location }}
                   {% endif %}
@@ -132,7 +135,10 @@
                 <div class="col-md-4 ms-auto">
                   <!-- if location starts with url apply click -->
                   {% if random_wmeat.recipe_location.startswith("https") %}
-                  <a href="{{ random_wmeat.recipe_location }}" target="_blank">click for recipe.</a>
+                  <button class="btn btn-primary">
+                    <a href="{{ random_wmeat.recipe_location }}" class="text-decoration-none text-dark"
+                        target="_blank" role="button">Clickfor recipe</a>
+                  </button>
                   {% else %}
                   {{ random_wmeat.recipe_location }}
                   {% endif %}
@@ -204,7 +210,10 @@
                 <div class="col-md-4 ms-auto">
                   <!-- if location starts with url apply click -->
                   {% if random_rmeat.recipe_location.startswith("https") %}
-                  <a href="{{ random_rmeat.recipe_location }}" target="_blank">click for recipe.</a>
+                  <button class="btn btn-primary">
+                    <a href="{{ random_rmeat.recipe_location }}"  class="text-decoration-none text-dark"
+                        target="_blank" role="button">Clickfor recipe</a>
+                  </button>
                   {% else %}
                   {{ random_rmeat.recipe_location }}
                   {% endif %}
@@ -276,7 +285,10 @@
                 <div class="col-md-4 ms-auto">
                   <!-- if location starts with url apply click -->
                   {% if random_ofish.recipe_location.startswith("https") %}
-                  <a href="{{ random_ofish.recipe_location }}" target="_blank">click for recipe.</a>
+                  <button class="btn btn-primary">
+                    <a href="{{ random_ofish.recipe_location }}" class="text-decoration-none text-dark"
+                        target="_blank" role="button">Clickfor recipe</a>
+                  </button>
                   {% else %}
                   {{ random_ofish.recipe_location }}
                   {% endif %}
@@ -346,7 +358,10 @@
                 <div class="col-md-4 ms-auto">
                   <!-- if location starts with url apply click -->
                   {% if random_wfish.recipe_location.startswith("https") %}
-                  <a href="{{ random_wfish.recipe_location }}" target="_blank">click for recipe.</a>
+                  <button class="btn btn-primary">
+                    <a href="{{ random_wfish.recipe_location }}" class="text-decoration-none text-dark"
+                        target="_blank" role="button">Clickfor recipe</a>
+                  </button>
                   {% else %}
                   {{ random_wfish.recipe_location }}
                   {% endif %}
