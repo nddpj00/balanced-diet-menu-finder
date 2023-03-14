@@ -126,6 +126,10 @@ margin-right: 60px;
     visibility: hidden;
 }
 
+.random-modal-nonurl{
+    margin-right: 25px;
+}
+
 /* add recipe page */
 
 #recipeCont{

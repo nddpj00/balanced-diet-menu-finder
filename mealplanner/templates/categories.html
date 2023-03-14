@@ -58,24 +58,24 @@
           <div class="modal-body">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col">
                   {{ random_vegmeal.recipe_notes}}
-                </div>
-                <div class="col-md-4 ms-auto">
-                  <!-- if location starts with url apply click -->
-                  {% if random_vegmeal.recipe_location.startswith("https") %}
-                  <button class="btn btn-primary">
-                    <a href="{{ random_vegmeal.recipe_location }}" class="text-decoration-none text-dark"
-                        target="_blank" role="button">Clickfor recipe</a>
-                  </button>
-                  {% else %}
-                  {{ random_vegmeal.recipe_location }}
-                  {% endif %}
                 </div>
               </div>
 
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary pageRefresh" data-bs-dismiss="modal">Close</button>
+                  <!-- if location starts with url apply click -->
+                  {% if random_vegmeal.recipe_location.startswith("https") %}
+                  <button class="btn btn-primary">
+                    <a href="{{ random_vegmeal.recipe_location }}" class="text-decoration-none text-dark"
+                        target="_blank" role="button">Click for recipe</a>
+                  </button>
+                  {% else %}
+                  <div class="random-modal-nonurl">
+                  {{ random_vegmeal.recipe_location }}
+                  </div>
+                  {% endif %}
+                  <button type="button" class="btn btn-secondary pageRefresh" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
