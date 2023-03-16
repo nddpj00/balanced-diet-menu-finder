@@ -219,6 +219,10 @@ font-family: 'Volkhov', serif;
     padding-right: 8px;
 }
 
+.modal-content{
+    font-family: 'Volkhov', serif;
+    background-color:#F8EFEA ;
+}
 
 .flashes{
     color: #E0475B;
