@@ -6,11 +6,11 @@
 
 I love food.  I mean I *really* love it.
 
-I love eating food, who doesnt?, but also I love reading about it, I love learning about it and of course I love cooking it too.  As such I took it upon myself to devise a weekly meal plan for my small family and have been doing so for a while.
+I love eating food, who doesnt? but also I love reading about it, I love learning about it and of course I love cooking it too.  As such I took it upon myself to devise a weekly meal plan for my small family and have been doing so for a while.
 
 I aim for the meals to be healthy, balanced, interesting and of course tasty yummo!  Sounds simple right?  
 
-But it not... firstly its very time consuming. 
+But it's not... firstly it's very time consuming. 
 
 I turn to my long tried-and-tested recipes which can be found either online, in my numerous cookbooks (which are in no-particular-order), 10 year old scraps of paper pulled from a sunday paper supplements (covered in sauce and flattened tomatoes) or finally, and more recently, in those free binders given to you on your first subscription to Gusto or Hello Fresh.  This all takes time. 
 

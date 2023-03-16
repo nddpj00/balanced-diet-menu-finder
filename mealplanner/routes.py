@@ -22,7 +22,6 @@ def home():
 def add_recipe():
     categories = list(Category.query.order_by(Category.food_category).all())
     cuisines = list(Cuisine.query.order_by(Cuisine.recipe_cuisine).all())
-    d=timedelta()
     if request.method == "POST":
         recipe = Recipe(
             recipe_name=request.form.get("recipe_name").title(),
@@ -38,6 +37,16 @@ def add_recipe():
         db.session.add(recipe)
         db.session.commit()
         flash('Recipe successfully added')
+        if recipe.category_id == 1:
+            return redirect("/vegetarian")
+        elif recipe.category_id == 2:
+            return redirect("/white_meat")
+        elif recipe.category_id == 3:
+            return redirect("/red_meat")
+        elif recipe.category_id == 4:
+            return redirect("/oily-fish")
+        else:
+            return redirect("/white-fish")
     return render_template("add_recipe.html", categories=categories, cuisines=cuisines)
 
 @app.route("/edit_recipe/<int:recipe_id>", methods=["GET", "POST"])
@@ -57,7 +66,7 @@ def edit_recipe(recipe_id):
         recipe.cuisine_id = request.form.get("cuisine_id")
         db.session.commit()
         flash('Recipe successfully updated')
-        return redirect(request.referrer)
+        return redirect(request.url)
     return render_template("edit_recipe.html", recipe=recipe, categories=categories, cuisines=cuisines)
 
 @app.route("/delete_recipe/<int:recipe_id>")
