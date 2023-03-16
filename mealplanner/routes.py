@@ -66,7 +66,16 @@ def edit_recipe(recipe_id):
         recipe.cuisine_id = request.form.get("cuisine_id")
         db.session.commit()
         flash('Recipe successfully updated')
-        return redirect(request.url)
+        if recipe.category_id == 1:
+            return redirect("/vegetarian")
+        elif recipe.category_id == 2:
+            return redirect("/white_meat")
+        elif recipe.category_id == 3:
+            return redirect("/red_meat")
+        elif recipe.category_id == 4:
+            return redirect("/oily-fish")
+        else:
+            return redirect("/white-fish")
     return render_template("edit_recipe.html", recipe=recipe, categories=categories, cuisines=cuisines)
 
 @app.route("/delete_recipe/<int:recipe_id>")
