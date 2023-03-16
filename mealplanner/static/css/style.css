@@ -72,9 +72,13 @@ i {
 
 
 .main-header {
-    margin-top: 12vh;
     text-align: center;
     font-family: 'Volkhov', serif;
+}
+
+.main-header h1 {
+    margin-top: 11vh;
+    margin-bottom: 4vh;
 }
 
 /*----- categories page cards---- */
@@ -106,6 +110,7 @@ i {
     background-color: #DED369;
     color: black;
     border-color: #DED369;
+    font-family: 'Volkhov', serif;
 }
 
 .btn:hover {
@@ -200,8 +205,13 @@ i {
     font-size: 20px;
 }
 
+.recipe-time{
+    font-family:font-family: 'Volkhov', serif;
+}
+
 .recipe-notes{
 margin-bottom: 25px;
+font-family: 'Volkhov', serif;
 }
 
 .recipe-icons{
@@ -228,6 +238,30 @@ margin-bottom: 25px;
 
 .recipe-location{
     font-size: 14px;;
+}
+
+.recipe-name{
+    font-size:13px ;
+}
+
+.recipe-notes{
+    font-size:13px ;
+}
+
+.recipe-time{
+    font-size: 10px;
+}
+
+.btn{
+    font-size: 13px;
+}
+
+.icon-key{
+    font-size: 11px;
+}
+
+.addRecipebtn{
+    font-size: 12px;
 }
 
 }
