@@ -30,7 +30,7 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapse{{ loop.index }}" aria-expanded="false"
                     aria-controls="collapse{{ loop.index }}">
-                    <div class="col-6 col-md-8 recipe-name">
+                    <div class="col-7 col-md-8 recipe-name">
                         {{ wmeat.recipe_name}}
                     </div>
 
@@ -38,7 +38,7 @@
 
                     {% set  cook_time_hours = wmeat.cook_time.total_seconds() // 3600 %}
                     {% set cook_time_minutes = (wmeat.cook_time.total_seconds() // 60) % 60 %}
-                    <div class="col-3 col-md-2 recipe-time">
+                    <div class="col-2 col-md-2 recipe-time">
                         Cook : {{ '%.2d'|format(cook_time_hours) ~ 'hrs ' ~ '%.2d'|format(cook_time_minutes) ~ 'mins' }}
                     </div>
 
