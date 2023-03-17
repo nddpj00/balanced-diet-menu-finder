@@ -7,7 +7,6 @@ from sqlalchemy.sql import func
 
 
 
-
 @app.route("/")
 def home():
     veg_recipe = list(Recipe.query.filter_by(category_id=1).all())
@@ -34,6 +33,7 @@ def add_recipe():
             category_id=request.form.get("category_id"),
             cuisine_id=request.form.get("cuisine_id")
         )
+        print(type(recipe.cook_time))
         db.session.add(recipe)
         db.session.commit()
         flash('Recipe successfully added')
@@ -113,3 +113,4 @@ def oily_fish():
 def white_fish():
     wfish_recipe = list(Recipe.query.filter_by(category_id=5).all())
     return render_template("white_fish.html", wfish_recipe=wfish_recipe)
+    
