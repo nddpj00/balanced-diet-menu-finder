@@ -27,7 +27,7 @@
     </div>
     <!-- Button trigger modal -->
 
-    <button type="button" class="btn btn-primary" onclick="{%  set random_vegmeal = veg_recipe|random %}"
+    <button type="button" class="btn random-btn" onclick="{%  set random_vegmeal = veg_recipe|random %}"
       data-bs-toggle="modal" data-bs-target="#randomVegModal">
       Get Random recipe!
     </button>
@@ -103,7 +103,7 @@
           NHS recommend: <br> Go for turkey and chicken without the skin as lower in fat.
       </div>
     </div>
-    <button type="button" class="btn" onclick="{% set random_wmeat = wmeat_recipe|random %}" data-bs-toggle="modal"
+    <button type="button" class="btn random-btn" onclick="{% set random_wmeat = wmeat_recipe|random %}" data-bs-toggle="modal"
       data-bs-target="#randomWmeatModal">
       Get Random recipe!
     </button>
@@ -181,7 +181,7 @@
       </div>
 
     </div>
-    <button type="button" class="btn" onclick="{%  set random_rmeat = rmeat_recipe|random %}" data-bs-toggle="modal"
+    <button type="button" class="btn random-btn" onclick="{%  set random_rmeat = rmeat_recipe|random %}" data-bs-toggle="modal"
       data-bs-target="#randomRmeatModal">
       Get Random recipe!
     </button>
@@ -259,7 +259,7 @@
           NHS recommend: <br> At least 1 portion of oily fish a week <br>
       </div>  
     </div>
-    <button type="button" class="btn" onclick="{%  set random_ofish = ofish_recipe|random %}" data-bs-toggle="modal"
+    <button type="button" class="btn random-btn" onclick="{%  set random_ofish = ofish_recipe|random %}" data-bs-toggle="modal"
       data-bs-target="#randomOfishModal">
       Get Random recipe!
     </button>
@@ -335,7 +335,7 @@
           NHS recommend: <br> At least 2 portions of fish a week, including 1 of oily fish <br>
       </div>
     </div>
-      <button type="button" class="btn" onclick="{%  set random_wfish = wfish_recipe|random %}" data-bs-toggle="modal"
+      <button type="button" class="btn random-btn" onclick="{%  set random_wfish = wfish_recipe|random %}" data-bs-toggle="modal"
         data-bs-target="#randomWfishModal">
         Get Random recipe!
       </button>
