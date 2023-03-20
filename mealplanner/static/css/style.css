@@ -82,11 +82,7 @@ i {
 }
 
 /*----- categories page cards---- */
-.ratio-4x3 {
-    @include media-breakpoint-up(md) {
-      --bs-aspect-ratio: 50%; // 2x1
-    }
-}
+
 
 .card-body{
     text-align: center;
@@ -206,7 +202,7 @@ i {
 }
 
 .recipe-time{
-    font-family:font-family: 'Volkhov', serif;
+    font-family:'Volkhov', serif;
 }
 
 .recipe-notes{
@@ -275,6 +271,10 @@ font-family: 'Volkhov', serif;
 
 .accordion-button{
     padding: 10px 15px;
+}
+
+.ratio-4x3{
+    --bs-aspect-ratio: 50%;
 }
 
 }

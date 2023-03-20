@@ -95,7 +95,7 @@ For the food group headers, card texts and nav links I used :-
 - Use a form to direct the user to easily add a recipe. 
 - Form looks for duplication and notifies via a flash message if duplicate exists.
 - User to select a category via the dropdown to sort in to the correct recipe page.
-- Once submitted the user is directed to the recipe page of the category chosen, allowing them to see the added recipe, along with a flash message to confirm recipe added.
+- Once submitted the user is directed to the recipe page of the category chosen, allowing them to see the added recipe, along with a flash message to give immediate and full feedback on data processes.
    
 
 3. Read / View a Recipe [C**R**UD] 
@@ -104,11 +104,29 @@ For the food group headers, card texts and nav links I used :-
 - Icons to allow user to quickly ascertain if the recipe is healthy or family-friendly, along with a key.
 - When accordian card is open the user can view notes about the recipe, along with buttons to direct them to edit the recipe or delete it.
 - If the location of the recipe is a URL then a button will be present which contains a link to the exteral webpage. If the recipe is in a cookbook or supplement then details such as cookbook and page number will be found here instead.
+-From the home page / (categories.html) the user has the option to click on the 'Get Random recipe' button which selects a random recipe from that respective food group. Great if in a hurry or feeling indecisive!
 
-4. Edit a Recipe [CR**U**D] To edit or update an existing recipe. 
+4. Update/ Edit a Recipe [CR**U**D]
 - Click on the edit button of the recipe to edit.
 - Form loads with pre-populated information.
-- Once 'Save Change' button clicked the user is directed to the page where the recipe is, along with a flash message confirming its updated.
+- Once 'Save Change' button clicked the user is directed to the page where the recipe is, along with a flash message giving immediate feedback its updated.
+
+5. Delete a Recipe [CRU**D**]
+- Click on the delete button of the recipe to delete it from the database.
+- Defensive programming modal opens to confirm user wants to proceed with the deletion.
+- If confirmaed the user is directed back to the page where the recipe was, along with a flash message giving immediate feedback its been deleted.
+
+###  Features to impliment in the future
+
+1. User login
+- This would allow others to use it for their purpose with *their* favourite recipes.
+- Users able to delete their own recipes and option to view only their recipes
+
+2. Filter
+- Users able to filter recipes by more than just food group.  Cuisine, Healthy or family friendly.
+
+3. Search
+- Users to be able to search a specific ingredient.  
 
 
 ## Technologies Used
@@ -118,19 +136,30 @@ For the food group headers, card texts and nav links I used :-
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+-   [Python](https://www.python.org/)
+
 
 ### Frameworks, Libraries & Programs Used
 
-1.  [Bootstrap 5.3.0:](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+1. [Flask 2.2.3](https://flask.palletsprojects.com/en/2.2.x/)
+    - Micro web framework use for the main build of the database-backed app.
+
+1.  [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
+    - Templating engine used to pass data to render final document. Used to write code similar to Python within the html documents.
+1.  [SQLAlchemy 1.4.46](https://www.sqlalchemy.org/)
+    - Toolkit used to allow use of Python language to complete SQL queries.
+1.  [Psycopg2 2.9.5](https://pypi.org/project/psycopg2/)
+    - PostgresSQL database adapter for Python.
+1.  [ElephantSQL](https://www.elephantsql.com/)
+    - To host my PostgreSQL databasee
+1.  [Heroku-22](https://www.heroku.com/)
+    - As the hosting platform for the App.
+1.  [Bootstrap 5.3.0:](https://getbootstrap.com/docs/5.0/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
-1.  [Hover.css:](https://ianlunn.github.io/Hover/)
-    - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
-1.  [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Ranchers' and 'Monserrat' fonts into the style.css file.
 1.  [GitHub:](https://github.com/)
     - GitHub is used to store the project's code after being pushed from Git.
 1.  [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the during the design process.
+    - Balsamiq was used to create the initial wireframes during the design process.
 1.  [BrowserStack:](https://www.browserstack.com/docs/)
     - BrowserStack allowed manual testing of the site of all different browsers and devices. 
 1.  [Unsplash:](https://unsplash.com/)
@@ -144,14 +173,13 @@ For the food group headers, card texts and nav links I used :-
 
 - I opted to **manually** test my site.  The reasons are -  
 
-    1. 
-    2. 
-    3. 
-    4. 
+    1. As the sole developer I can quickly carry out tests as I go and can obtain immediate results from the test.
+    2. As the main purpose of the site is to learn about Back End Development, show understanding and gain a qualification; and won't need to be maintained in the long term, I felt the time it would take to build an automated testing process was unnecessary on this occasion.  In a real-world situation, the use of a test framework, such as Jest would be invaluable to ensure the continiuous integrity of the site.
+    3. UX testing. Important to the overall usability of the site and can only be carried out via manual testing. Automated testing lacks human observation and cognitive abilities.
 
 - Reasons why I would use Automated Testing in the future for other projects.
 
-    1. Larger scale site or application that may have multiple pages and an increased amount of functionality and code. Manual testing would take too long.
+    1. Larger scale site or application that may have an increased amount of functionality and code. Manual testing would take too long.
     2. Working in a team. Possibly no one person with in-depth knowledge of how the whole site should work and perform. Automated tests would allow anyone to run them.
     3. Continual code added to the site. Automated tests can be run after every addition, ensuring no disruption to the existing code.
     4. Higher accuracy. Important if the site is in the public domain and linked to an organisation. To avoid deprecation of the 'brand' due to a poor website.
@@ -160,28 +188,22 @@ For the food group headers, card texts and nav links I used :-
 ### Validators
 
 -   W3C Markup Validator complete without errors.
-   <img align = "center" width ="300px" height = 200px src = "">
+   <img align = "center" width ="300px" height = 200px src = "mealplanner/static/images/testing/bdrf-testing-w3c-validator.png">
 
     
 -   W3C CSS Validator complete without errors.
-   <img align = "center"  style= width:300px; height:200px src= "">  
+   <img align = "center"  style= width:300px; height:200px src= "mealplanner/static/images/testing/bdrf-testing-wc3-css-validator.png">  
 
--   JS Hint Javascript Validator installed and showing no errors or warnings.
-    -  
-    - 
-    - 
+-   Code Institute Python Linter  showing no errors or warnings.
+    <img align = "center"  style= width:300px; height:200px src= "mealplanner/static/images/testing/bdrf-testing-ci-python-linter.png">  
 
--   Lighthouse Accessibility.
-    - Running at a score of  
-
-    <img align = "center" width ="300px" height = "200px" src = "">
-    
 
 -   Lighthouse Overall Performance.
-   - Performance
-   - Best Practices
-   - SEO
-    <img align = "center" width ="300px" height = "200px" src = "">
+    - Accessibility 98
+    - Performance 98
+    - Best Practices 83
+    - SEO 90  
+    <img align = "center" width ="300px" height = "200px" src = "mealplanner/static/images/testing/bdrf-testing-lighthouse.png">
 
 ### Testing User Stories from User Experience (UX) Section
 
