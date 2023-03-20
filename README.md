@@ -6,9 +6,9 @@
 
 I love food.  I mean I *really* love it.
 
-I love eating food, who doesnt? but also I love reading about it, I love learning about it and of course I love cooking it too.  As such I took it upon myself to devise a weekly meal plan for my small family and have been doing so for a while.
+I love eating food, who doesnt? but also I love reading about it, I love learning about it and of course I love cooking it too.  As such I took it upon myself to devise a weekly meal plan for my small family and have been doing so for a while now.
 
-I aim for the meals to be healthy, balanced, interesting and of course tasty yummo!  Sounds simple right?  
+I aim for the meals to be healthy, balanced, interesting and of course tasty!  Sounds simple right?  
 
 But it's not... firstly it's very time consuming. 
 
@@ -74,14 +74,16 @@ For the food group headers, card texts and nav links I used :-
 
 ### Wireframes
 
-   **Large Screen Home page Wireframe**
+   **Large Screen Wireframes**
 <img align = "center" width = "300px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes.png">
-
-   **Mobile Screen Home page Wireframe**
-<img align = "center" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-home.png">
-
-   **Large Screen Add Recipe form Wireframe**
 <img align = "center" width = "300px" height = "200px" src = "mealplanner/wireframes/bdrf-addrecipe.png">
+<img align = "center" width = "300px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-recipe.png">
+
+   **Mobile Screen Wireframes**
+<img align = "center" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-home.png">
+<img align = "center" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-add-recipe.png">
+<img align = "center" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-recipe.png">
+
 
 ##  Features
 
