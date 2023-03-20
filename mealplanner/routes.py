@@ -4,6 +4,8 @@ from flask import render_template, request, redirect, url_for, flash
 from mealplanner import app, db, models
 from mealplanner.models import Category, Recipe, Cuisine
 from sqlalchemy.sql import func
+from psycopg2.errors import UniqueViolation
+from sqlalchemy.exc import IntegrityError
 
 
 
@@ -22,6 +24,7 @@ def add_recipe():
     categories = list(Category.query.order_by(Category.food_category).all())
     cuisines = list(Cuisine.query.order_by(Cuisine.recipe_cuisine).all())
     if request.method == "POST":
+        
         recipe = Recipe(
             recipe_name=request.form.get("recipe_name").title(),
             recipe_notes=request.form.get("recipe_notes").capitalize(),
@@ -33,20 +36,25 @@ def add_recipe():
             category_id=request.form.get("category_id"),
             cuisine_id=request.form.get("cuisine_id")
         )
-        print(type(recipe.cook_time))
-        db.session.add(recipe)
-        db.session.commit()
-        flash('Recipe successfully added')
-        if recipe.category_id == 1:
-            return redirect("/vegetarian")
-        elif recipe.category_id == 2:
-            return redirect("/white_meat")
-        elif recipe.category_id == 3:
-            return redirect("/red_meat")
-        elif recipe.category_id == 4:
-            return redirect("/oily-fish")
-        else:
-            return redirect("/white-fish")
+        try:    
+            db.session.add(recipe)
+            db.session.commit()
+            flash('Recipe successfully added')
+            if recipe.category_id == 1:
+                return redirect("/vegetarian")
+            elif recipe.category_id == 2:
+                return redirect("/white_meat")
+            elif recipe.category_id == 3:
+                return redirect("/red_meat")
+            elif recipe.category_id == 4:
+                return redirect("/oily-fish")
+            else:
+                return redirect("/white-fish")
+        except IntegrityError as e:
+            assert isinstance(e.orig, UniqueViolation) # proves the original exception
+            flash("ERROR : Oops this recipe has already been added") 
+            db.session.rollback()
+
     return render_template("add_recipe.html", categories=categories, cuisines=cuisines)
 
 @app.route("/edit_recipe/<int:recipe_id>", methods=["GET", "POST"])
