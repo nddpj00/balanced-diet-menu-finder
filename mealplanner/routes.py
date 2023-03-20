@@ -54,7 +54,6 @@ def add_recipe():
             assert isinstance(e.orig, UniqueViolation) # proves the original exception
             flash("ERROR : Oops this recipe has already been added") 
             db.session.rollback()
-
     return render_template("add_recipe.html", categories=categories, cuisines=cuisines)
 
 @app.route("/edit_recipe/<int:recipe_id>", methods=["GET", "POST"])
@@ -69,7 +68,6 @@ def edit_recipe(recipe_id):
         recipe.recipe_location = request.form.get("recipe_location")
         recipe.family_friendly = bool(True if request.form.get("family_friendly") else False)
         recipe.recipe_healthy = bool(True if request.form.get("recipe_healthy") else False)
-        recipe.date_added = func.now()
         recipe.category_id = request.form.get("category_id")
         recipe.cuisine_id = request.form.get("cuisine_id")
         db.session.commit()
