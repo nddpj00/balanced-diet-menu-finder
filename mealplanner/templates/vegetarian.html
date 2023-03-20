@@ -84,12 +84,9 @@
                     </button>
                     <!-- if location is a url it applies a button with link, otherwise shows cookbook and page-->
                     {% if vegmeal.recipe_location.startswith("https") %}
-                    <button class="btn btn-primary">
-                        <a href="{{ vegmeal.recipe_location }}"
-                            class="text-decoration-none text-dark"
-                            target="_blank" role="button">Click
-                            for recipe</a>
-                    </button>
+                  
+                        <a href="{{ vegmeal.recipe_location }}" class=" btn btn-primary text-decoration-none text-dark"
+                            target="_blank" role="button">Click for recipe</a>
                 </div>
                 {% else %}
             </div>

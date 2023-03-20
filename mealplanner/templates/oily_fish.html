@@ -84,12 +84,9 @@
                     </button>
                     <!-- if location is a url it applies a button with link, otherwise shows cookbook and page-->
                     {% if ofish.recipe_location.startswith("https") %}
-                    <button class="btn btn-primary">
                         <a href="{{ ofish.recipe_location }}"
-                            class="text-decoration-none text-dark"
-                            target="_blank" role="button">Click
-                            for recipe</a>
-                    </button>
+                            class="btn btn-primary text-decoration-none text-dark" target="_blank" role="button">Click for recipe
+                        </a>
                 </div>
                 {% else %}
             </div>

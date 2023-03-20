@@ -75,11 +75,13 @@ For the food group headers, card texts and nav links I used :-
 ### Wireframes
 
    **Large Screen Wireframes**
-<img align = "center" width = "300px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes.png">
-<img align = "center" width = "300px" height = "200px" src = "mealplanner/wireframes/bdrf-addrecipe.png">
-<img align = "center" width = "300px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-recipe.png">
+
+<img align = "center" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes.png">
+<img align = "center" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-addrecipe.png">
+<img align = "center" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes-lg-recipe.png">
 
    **Mobile Screen Wireframes**
+
 <img align = "center" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-home.png">
 <img align = "center" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-add-recipe.png">
 <img align = "center" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-recipe.png">
@@ -89,10 +91,24 @@ For the food group headers, card texts and nav links I used :-
 
 1. Responsive on all device sizes
 
-2. 
+2. Add / Store a Recipe [**C**RUD]
+- Use a form to direct the user to easily add a recipe. 
+- Form looks for duplication and notifies via a flash message if duplicate exists.
+- User to select a category via the dropdown to sort in to the correct recipe page.
+- Once submitted the user is directed to the recipe page of the category chosen, allowing them to see the added recipe, along with a flash message to confirm recipe added.
    
 
-3. 
+3. Read / View a Recipe [C**R**UD] 
+- Select via the Navbar food group of the recipe youre looking for. i.e Oily-fish
+- See the time it takes to cook the recipe on the main header.
+- Icons to allow user to quickly ascertain if the recipe is healthy or family-friendly, along with a key.
+- When accordian card is open the user can view notes about the recipe, along with buttons to direct them to edit the recipe or delete it.
+- If the location of the recipe is a URL then a button will be present which contains a link to the exteral webpage. If the recipe is in a cookbook or supplement then details such as cookbook and page number will be found here instead.
+
+4. Edit a Recipe [CR**U**D] To edit or update an existing recipe. 
+- Click on the edit button of the recipe to edit.
+- Form loads with pre-populated information.
+- Once 'Save Change' button clicked the user is directed to the page where the recipe is, along with a flash message confirming its updated.
 
 
 ## Technologies Used
