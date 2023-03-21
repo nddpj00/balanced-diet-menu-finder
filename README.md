@@ -261,6 +261,8 @@ cuisine_id: <Integer>
 
 - #### Outcomes
 
+<img align = "center" width = "500px" height = "350px" src = "mealplanner/static/images/testing/manual-testing-matrix.png"> 
+
 I used a programme called Browserstack to perform the tests. This is software provided as part of the course, included in the Student Developer pack.  This software allows you to load your site on a live environment on each device and browser.
 
 The application recommended that 1 x high-end, 1 x low-end device and a tablet is tested for each main manufacturer of smart devices.  I've tested Apple and Samsung devices of differing sizes.  
