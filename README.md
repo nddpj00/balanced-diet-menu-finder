@@ -59,11 +59,11 @@ I wanted some vivid colours that come from produce so have I have used avocado g
 
 - I used [Google Fonts](https://fonts.google.com/) for my application. 
 
-For the front page navbar brand header I used :-
+-For the front page navbar brand header I used :-
 
 - [Fredoka One](https://fonts.google.com/specimen/Fredoka+One)
 
-For the food group headers, card texts and nav links I used :-
+-For the food group headers, card texts and nav links I used :-
 
 - [Volkhov](https://fonts.google.com/specimen/Volkhov)
 
@@ -76,15 +76,49 @@ For the food group headers, card texts and nav links I used :-
 
    **Large Screen Wireframes**
 
-<img align = "center" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes.png">
-<img align = "center" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-addrecipe.png">
-<img align = "center" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes-lg-recipe.png">
+<img width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes.png">
+<img width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-addrecipe.png">
+<img style="float:right" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes-lg-recipe.png">
 
    **Mobile Screen Wireframes**
 
-<img align = "center" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-home.png">
-<img align = "center" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-add-recipe.png">
-<img align = "center" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-recipe.png">
+<img width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-home.png">
+<img  width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-add-recipe.png">
+<img  width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-recipe.png">
+
+
+## The Database
+
+For the App the majority of the data is contained within the Recipe table.  The Category table is to allow separation of the recipes but is of course related to the main recipes.  The Cuisine table is there for future development, to allow filtration of the cuisine type of the recipe.
+
+<img align = "center" width = "300px" height = "200px" src = "mealplanner/wireframes/bdrf-databaseschema.png">
+
+**Category**
+```
+id: <Integer>
+food_category: <string>
+```
+
+**Cuisine**
+```
+id: <Integer>
+recipe_cuisine: <String>
+```
+
+**Recipe**
+```
+id: <Integer>
+recipe_name: <String>
+recipe_notes: <Text>
+cook_time: <Time>
+recipe_location: <Text>
+family_friendly : <Boolean>
+recipe_healthy: <Boolean>
+date_added: <Date>
+category_id: <Integer>
+cuisine_id: <Integer>
+
+```
 
 
 ##  Features
