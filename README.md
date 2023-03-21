@@ -123,7 +123,7 @@ For the food group headers, card texts and nav links I used :-
 - Users able to delete their own recipes and option to view only their recipes
 
 2. Filter
-- Users able to filter recipes by more than just food group.  Cuisine, Healthy or family friendly.
+- Users able to filter recipes by more than just food group.  Cuisine, Healthy or family friendly.  This is the reason I've added 'Cuisine' information on the database but as yet, not used.
 
 3. Search
 - Users to be able to search a specific ingredient.  
@@ -167,6 +167,28 @@ For the food group headers, card texts and nav links I used :-
 1.  [Tinypng:](https://tinypng.com/)
     - Tinypng was used to compress the photos to improve site load times.
 
+
+### Validators
+
+-  W3C Markup Validator complete without errors.
+<img align = "center" width ="300px" height = 200px src = "mealplanner/static/images/testing/bdrf-testing-w3c-validator.png">
+
+-   W3C CSS Validator complete without errors.
+<img align = "center"  style= width:300px; height:200px src= "mealplanner/static/images/testing/bdrf-testing-wc3-css-validator.png">  
+
+-   Code Institute Python Linter  showing no errors or warnings.
+<img align = "center"  style= width:300px; height:200px src= "mealplanner/static/images/testing/bdrf-testing-ci-python-linter.png">
+
+-   JSHint to Check Javascript. 2 Warnings about using 'let' of which I'm happy to ignore.
+<img align = "center"  style= width:300px; height:200px src= "mealplanner/static/images/testing/bdrf-testing-jshint.png">
+
+-   Lighthouse Overall Performance.
+- Accessibility 98
+- Performance 98
+- Best Practices 83
+- SEO 90  
+<img align = "center" width ="300px" height = "200px" src = "mealplanner/static/images/testing/bdrf-testing-lighthouse.png">
+
 ## Testing
 
 ### Manual Vs Automated Testing
@@ -185,152 +207,59 @@ For the food group headers, card texts and nav links I used :-
     4. Higher accuracy. Important if the site is in the public domain and linked to an organisation. To avoid deprecation of the 'brand' due to a poor website.
     5. Time. Though they take longer to set up initially, having a bespoke automated testing process will save time in the long run, due to how frequently they need to be run when maintaining and improving the site.
 
-### Validators
-
--   W3C Markup Validator complete without errors.
-   <img align = "center" width ="300px" height = 200px src = "mealplanner/static/images/testing/bdrf-testing-w3c-validator.png">
-
-    
--   W3C CSS Validator complete without errors.
-   <img align = "center"  style= width:300px; height:200px src= "mealplanner/static/images/testing/bdrf-testing-wc3-css-validator.png">  
-
--   Code Institute Python Linter  showing no errors or warnings.
-    <img align = "center"  style= width:300px; height:200px src= "mealplanner/static/images/testing/bdrf-testing-ci-python-linter.png">  
 
 
--   Lighthouse Overall Performance.
-    - Accessibility 98
-    - Performance 98
-    - Best Practices 83
-    - SEO 90  
-    <img align = "center" width ="300px" height = "200px" src = "mealplanner/static/images/testing/bdrf-testing-lighthouse.png">
-
-### Testing User Stories from User Experience (UX) Section
-
--   ### User stories
-
-    -   #### First-Time Visitor Goals
-
-        1. As a First Time Visitor, I want to
-        <img align = "center" width = "300px" height = "200px" src = "">  
-
-        - 
-
-        2. As a First Time Visitor, I want to
-        <img align = "center" width = "300px" height = "200px" src = "">  
-
-        -   
-        - 
-        - 
-
-        3. As a First Time Visitor, I want to  
-        <img align = "center" width = "300px" height = "200px" src = "">  
-
-        - 
-
-        - 
-
-
-    -   #### Returning Visitor Goals
-
-        1. As a Returning Visitor, I want to   
-        <img align = "center" width = "300px" height = "200px" src = "">  
-
-        2. As a Returning Visitor, I want to
-        <img align = "center" width = "300px" height = "200px" src = "">
-
-        3. As a Returning Visitor, I want to  
-        - 
-        -  
-        <img align = "center" width = "300px" height = "200px" src = "">  
-
-
-    -   #### Frequent User Goals
-
-        1. As a Frequent User, I want to 
-        - 
-        -  
-
-        2. As a Frequent User, I want to
-        - 
-        -  
-        <img align = "center" width = "300px" height = "200px" src = "">  
-
-        3. As a Frequent User, I want to
-        - 
-        - 
-
-### UX Manual Test process  
+### Manual Test process  
 
   - The Test  
+    1. All navbar links work.
+    2. Home/Category page loads a 'Random recipe' of the correct food category. Check all 5.
+    3. All accordians work as expected across all 5 category html pages.
+    4. 'Add recipe' page opens with form to complete and all fields work as expected
+    5. 'Add recipe' button adds to the database and user is directed to the correct relevant recipe page, with feedback confirming the recipe has been added.
+    6. Edit button opens the edit_recipe page with form pre-populated with existing information.
+    7. 'Save Changes' button updates database with the changes made and user is directed to the correct, relevant page, with feedback confirming the recipe has been updated.
+    8. Delete button produces a modal to confirm user wants to proceed. If selects ok the user receives feedback confirming the deletion.
+    9. All pages work on different size screens, different browsers and devices
 
 - #### Outcomes
 
-    Though the test is a little rudimentary it provided a lot of insight, watching people unfamiliar with the site trying to use it.  
-    
-  * The Good  
-
-  * The Bad
-
-  * Actions taken.  
-
-
-
-### 10-point Manual Test process  
-
-I used a programme called Browserstack to perform the tests. This is software provided as part of the course, included in the Student Developer pack.  
+I used a programme called Browserstack to perform the tests. This is software provided as part of the course, included in the Student Developer pack.  This software allows you to load your site on a live environment on each device and browser.
 
 The application recommended that 1 x high-end, 1 x low-end device and a tablet is tested for each main manufacturer of smart devices.  I've tested Apple, Samsung, and Google.  
 
-Also, I've tested the site on a broad cross-section of browsers.  Chrome, Edge, Safari and Firefox.  
+Also, I've tested the site on a broad cross-section of browsers.  Chrome, Edge, Safari and Firefox.
 
-Here are the devices/browsers and a screenshot of the front page of my site.  
-<img align = "center" width = "300px" height = "200px" src = "">  
+The site performed all across all devices and browsers. All links worked as expected.  Appearance and layout looked good on all devices too.
 
-
-The 10-points are as follows -   
-Links  
-1. 
-2.   
-3. 
-4. 
-5. 
-6. 
-7. 
-8.  
-9. 
-10.   
 
 A small selection of screenshots showing the cross-browser testing.  
-Safari 16  
-<img align = "center" width = "200px" height = "100px" src = "">   
-Samsung Tab8  
-<img align = "center" width = "200px" height = "100px" src = "">   
-Samsung Ultra 22  
-<img align = "center" width = "200px" height = "100px" src = "">  
-Ipad Pro 12.9 2022  
-<img align = "center" width = "200px" height = "100px" src = "">  
+Windows 11  
+<img align = "center" width = "200px" height = "100px" src = "mealplanner/static/images/testing/bdrf-testing-windows11.png">   
+Mac Big Sur 14.1  
+<img align = "center" width = "200px" height = "100px" src = "mealplanner/static/images/testing/bdrf-testing-mac-bigsur-14.1.png">   
+Apple Iphone 14  
+<img align = "center" width = "100px" height = "200px" src = "mealplanner/static/images/testing/bdrf-testing-iphone14.png">  
+Samsung S21 Ultra  
+<img align = "center" width = "100px" height = "200px" src = "mealplanner/static/images/testing/bdrf-testing-s21ultra.png">  
+Apple iPad Pro 11  
+<img align = "center" width = "150px" height = "200px" src = "mealplanner/static/images/testing/bdrf-testing-ipadpro11-2021.png">  
 
 
 ## Bugs
-1. 
-2. 
-3. 
-4. .  
-<img align = "center" width = "200px" height = "100px" src = "">  
-
-5. 
+1. If a user incorrectly input 60mins or over in the minute field for the cook time a DataError was produced.
+<img align = "center" width = "200px" height = "100px" src = "mealplanner/static/images/testing/bdrf-bug-over60mins.png">
+2. When editing a recipe the cook time wasnt pre-populating, remaining empty.
+3. If user clicks on 'Get random recipe' button, though it worked the variable stored the recipe.  Meaning if the user clicked it over & over again it would show the same recipe. 
+4.  When deploying my original app I ran in to a problem with the database.  It wasn't creating the database and linking to the app.  After many hours trying to resolve I copied over the code on to a new workspace and re-attempted the deployment.  Unfortunately my 'commits' will be linked to that original Repo ["mealplanner.2"](https://github.com/nddpj00/mealplanner.2)
 
 ## Fixes
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
+1. The dataerror was due to using the incorrect datatype I believe.  In the form I chaned the type to "time" and this resolved it immediately.
+2. The data stored in the database was in the incorrect format.  By added 0 before the value on the html resolved this. ie value="0{{ recipe.cook_time }}" .
+3. I added some Javascript to reload the page on the 'close' button to allow a new recipe to be set as random.
 
-   ### Known Bugs
-
+### Known Bugs
+No known bugs
 
 
 ## Deployment
@@ -412,4 +341,4 @@ Validating my Javascript code, cleaning it up and removing unnecessary semi-colo
 
 -   My Mentor for continuous helpful feedback.
 
--   EKC course facilitator for introducing me to many new concepts and software and lots of great advice.
+-   EKC course facilitator, Rachel Furlong for introducing me to many new concepts and software and lots of great advice.
