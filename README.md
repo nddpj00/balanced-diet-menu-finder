@@ -383,13 +383,10 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 ## **CREDITS** ##
 
 
-
-
-
 ### Content
 
--  https://codepen.io/maheshambure21/pen/QwXaRw
-  The navigation hover effect was taken from this site.  
+-  Tim Nelson from Code Institute for his walkthroughs of Thorin & Co and Taskmanager. These were a great resource when putting my app together and creating the databases.
+-   Anna Greaves from Code Institute for her instructions on deploying the app.
 -   All remaining content was written by the developer.
 
 
@@ -397,7 +394,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 ### Media
 
 -   [Unsplash]( https://unsplash.com/)All photos used came from unsplash.  
--   [Font-Awesome](https://fontawesome.com/) Social media icons.
+-   [Font-Awesome](https://fontawesome.com/)  icons.
 
 ### Acknowledgements
 
