@@ -76,15 +76,15 @@ I wanted some vivid colours that come from produce so have I have used avocado g
 
    **Large Screen Wireframes**
 
-<img width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes.png">
+<img style="float:left" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes.png">
 <img width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-addrecipe.png">
 <img style="float:right" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes-lg-recipe.png">
 
    **Mobile Screen Wireframes**
 
-<img width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-home.png">
+<img style="float:left" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-home.png">
 <img  width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-add-recipe.png">
-<img  width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-recipe.png">
+<img  style="float:right" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-recipe.png">
 
 
 ## The Database
