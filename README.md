@@ -20,7 +20,7 @@ To summarize, the two main reasons why I've created the Balanced Diet Meal Finde
 
 ---
 
-## User Experience (UX)
+## **USER EXPERIENCE (UX)** ##
 
 The project was created in order to fulfil the criteria of the L5 Diploma in Web Application Development that I'm completing. This is for Unit 3: Back End Development.
 
@@ -46,7 +46,7 @@ This units project criteria was the perfect opportunity to move the data (recipe
 - :heavy_check_mark: easily plan a balanced, healthy meal-plan.
 
 
-### Design  
+## Design  
 
 #### Colour Scheme
 
@@ -87,8 +87,10 @@ I wanted some vivid colours that come from produce so have I have used avocado g
 <img width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-add-recipe.png">
 <img width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-recipe.png">
 
+---
+## **THE DATABASE** ##
 
-## The Database
+I chose to use PostgreSQL, a relational database system for my app as I felt there was going to be clear defined relationships between the tables and the data therein. I felt an RDBMS would be well suited to query and manage the content for my needs.
 
 1. For the App the majority of the data is contained within the Recipe table.  
 1. The Category table is to allow grouping of the recipes but is still course related to the main recipes too.
@@ -123,7 +125,7 @@ cuisine_id: <Integer>
 
 ```
 
-
+---
 ## **FEATURES** ##
 
 1. Responsive on all device sizes
@@ -166,7 +168,7 @@ cuisine_id: <Integer>
 3. Search
 - Users to be able to search a specific ingredient.  
 
-
+---
 ## **TECHNOLOGIES USED** ##
 
 ### Languages
@@ -204,8 +206,8 @@ cuisine_id: <Integer>
 1.  [Tinypng:](https://tinypng.com/)
     - Tinypng was used to compress the photos to improve site load times.
 
-
-### Validators
+---
+### **VALIDATORS** ##
 
 -  W3C Markup Validator complete without errors except for the Jinja syntax.
 <img align = "center" width ="300px" height = 200px src = "mealplanner/static/images/testing/bdrf-testing-w3c-validator.png">
@@ -360,7 +362,7 @@ The site is hosted on [Heroku](https://mealplanner-2.herokuapp.com/).
 
 - The app can now be run locally by typing python run.py in the terminal and will be available in your browser using the address "http://localhost:5000".
 
-
+---
 ## **CREDITS** ##
 
 
