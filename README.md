@@ -14,7 +14,7 @@ I turn to my long tried-and-tested recipes which can be found either online, in 
 
 Also, with so much information around about what makes a balanced, healthy, nutritious diet, it can feel confusing and overwhelming to say the least.  Who really knows if they're eating enough oily fish in their diet??
 
-OK to summarize, the two main reasons why I've created the Balanced Diet Meal Finder are; 
+To summarize, the two main reasons why I've created the Balanced Diet Meal Finder are; 
 - To have all your favourite recipes in one place, saving you time and effort.
 - Categorized recipes in to  food groups. Vegetarian, White Meat, Red Meat, Oily Fish and White Fish to help you choose a nice balanced diet.
 
