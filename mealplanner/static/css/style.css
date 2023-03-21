@@ -5,18 +5,18 @@ body {
     background-color: whitesmoke;
 }
 
-.navbar{
-    background-color:#DED369!important;
-    color:black!important;
+.navbar {
+    background-color: #DED369 !important;
+    color: black !important;
 }
 
-.navbar-toggler{
-    margin-right:16px;
+.navbar-toggler {
+    margin-right: 16px;
 }
 
 
-.navbar a{
-    color:black !important;
+.navbar a {
+    color: black !important;
 }
 
 i {
@@ -24,18 +24,18 @@ i {
     font-size: 19px;
 }
 
-.navbar-logo{
+.navbar-logo {
     margin-left: 20px;
 }
 
-.navbar-brand{
+.navbar-brand {
     margin-left: 5px;
     margin-right: 5px;
     font-family: 'Fredoka One', cursive;
     font-size: 28px;
 }
 
-.nav-link{
+.nav-link {
     font-family: 'Volkhov', serif;
     font-size: 20px;
 }
@@ -44,29 +44,29 @@ i {
     margin-right: 60px;
 }
 
-.dropdown-menu a:hover{
+.dropdown-menu a:hover {
     background-color: #DED369;
 }
 
 
 .dropdown-item {
     font-family: 'Volkhov', serif;
-    }
+}
 
 .dropdown-menu.show {
     background-color: #DED369;
 }
 
-.offcanvas-body{
+.offcanvas-body {
     background-color: #DED369;
 }
 
-.offcanvas-header{
+.offcanvas-header {
     background-color: whitesmoke;
     font-family: 'Fredoka One', cursive;
 }
 
-.dropdown-menu.show{
+.dropdown-menu.show {
     background-color: whitesmoke;
 }
 
@@ -84,25 +84,25 @@ i {
 /*----- categories page cards---- */
 
 
-.card-body{
+.card-body {
     text-align: center;
     background-color: #F8EFEA;
 }
 
-.card-text{
+.card-text {
     font-size: 15px;
 }
 
-.card-body button{
+.card-body button {
     font-family: 'Volkhov', serif;
 }
 
-.card{
+.card {
     border-width: 5px;
     font-family: 'Volkhov', serif;
 }
 
-.btn{
+.btn {
     background-color: #DED369;
     color: black;
     border-color: #DED369;
@@ -110,7 +110,7 @@ i {
 }
 
 .btn:hover {
-    background-color: #E0475B!important;
+    background-color: #E0475B !important;
 }
 
 .brand-footer {
@@ -122,33 +122,33 @@ i {
     color: black;
 }
 
-.modal-header .btn-close{
+.modal-header .btn-close {
     visibility: hidden;
 }
 
-.random-modal-nonurl{
+.random-modal-nonurl {
     margin-right: 25px;
 }
 
 /* add recipe page */
 
-#recipeCont{
+#recipeCont {
     margin-top: 60px;
 }
 
-.toggle{
+.toggle {
     margin-left: 3.25rem;
 }
 
-.icon-center{
+.icon-center {
     text-align: center;
 }
 
-.form-switch{
+.form-switch {
     padding-left: 53px;
 }
 
-#add-recipe-flash{
+#add-recipe-flash {
     text-align: center;
     list-style-type: none
 }
@@ -156,126 +156,124 @@ i {
 
 /* recipe - base */
 
-.accordion{
+.accordion {
     margin-top: 5px;
     color: white;
 }
 
-.accordion-button{
+.accordion-button {
     background-color: #DED369;
     color: black;
 }
 
-.accordion-button:not(.collapsed){
+.accordion-button:not(.collapsed) {
     background-color: #E0475B;
     border-color: #E0475B;
     color: white;
 }
 
-.accordion-button:not(.collapsed) i{
+.accordion-button:not(.collapsed) i {
     color: white;
 }
 
-.accordion-body{
+.accordion-body {
     background-color: #F8EFEA;
 }
 
-
-
-.icon-key i{
+.icon-key i {
     margin-left: 15px;
     margin-right: 6px;
     font-size: 18px;
 
 }
 
-.icon-key{
+.icon-key {
     font-family: 'Volkhov', serif;
     margin-left: 15px;
     margin-right: 15px;
     text-align: right;
 }
 
-.recipe-name{
+.recipe-name {
     font-family: 'Volkhov', serif;
     font-size: 20px;
 }
 
-.recipe-time{
-    font-family:'Volkhov', serif;
+.recipe-time {
+    font-family: 'Volkhov', serif;
 }
 
-.recipe-notes{
-margin-bottom: 25px;
-font-family: 'Volkhov', serif;
+.recipe-notes {
+    margin-bottom: 25px;
+    font-family: 'Volkhov', serif;
 }
 
-.recipe-icons{
+.recipe-icons {
     text-align: right;
     padding-right: 8px;
 }
 
-.modal-content{
+.modal-content {
     font-family: 'Volkhov', serif;
-    background-color:#F8EFEA ;
+    background-color: #F8EFEA;
 }
 
-.flashes{
+.flashes {
     color: #E0475B;
     font-size: 20px;
 }
 
 @media screen and (max-width: 480px) {
 
-.nomobile {
-    display:none!important;
-    
-}
+    .nomobile {
+        display: none !important;
 
-.navbar-brand{
-    font-size: 16px;
-}
+    }
 
-.recipe-location{
-    font-size: 14px;;
-}
+    .navbar-brand {
+        font-size: 16px;
+    }
 
-.recipe-name{
-    font-size:13px ;
-}
+    .recipe-location {
+        font-size: 14px;
+        ;
+    }
 
-.recipe-notes{
-    font-size:13px ;
-}
+    .recipe-name {
+        font-size: 13px;
+    }
 
-.recipe-time{
-    font-size: 10px;
-    text-align: right;
-}
+    .recipe-notes {
+        font-size: 13px;
+    }
 
-.btn{
-    font-size: 13px;
-}
+    .recipe-time {
+        font-size: 10px;
+        text-align: right;
+    }
 
-.icon-key{
-    font-size: 11px;
-}
+    .btn {
+        font-size: 13px;
+    }
 
-.addRecipebtn{
-    font-size: 12px;
-}
+    .icon-key {
+        font-size: 11px;
+    }
 
-.random-btn{
-    font-size: 20px;
-}
+    .addRecipebtn {
+        font-size: 12px;
+    }
 
-.accordion-button{
-    padding: 10px 15px;
-}
+    .random-btn {
+        font-size: 20px;
+    }
 
-.ratio-4x3{
-    --bs-aspect-ratio: 50%;
-}
+    .accordion-button {
+        padding: 10px 15px;
+    }
+
+    .ratio-4x3 {
+        --bs-aspect-ratio: 50%;
+    }
 
 }
-
