@@ -124,7 +124,7 @@ cuisine_id: <Integer>
 ```
 
 
-##  Features
+## **FEATURES** ##
 
 1. Responsive on all device sizes
 
@@ -166,7 +166,7 @@ cuisine_id: <Integer>
 - Users to be able to search a specific ingredient.  
 
 
-## Technologies Used
+## **Technologies Used** ##
 
 ### Languages Used
 
@@ -226,7 +226,8 @@ cuisine_id: <Integer>
 - SEO 90  
 <img align = "center" width ="300px" height = "200px" src = "mealplanner/static/images/testing/bdrf-testing-lighthouse.png">
 
-## Testing
+---
+## **TESTING** ##
 
 ### Manual Vs Automated Testing
 
@@ -249,17 +250,17 @@ cuisine_id: <Integer>
 ### Manual Test process  
 
   - The Test  
-    1. All navbar links work.
-    2. Home/Category page loads a 'Random recipe' of the correct food category. Check all 5.
-    3. All accordians work as expected across all 5 category html pages.
-    4. 'Add recipe' page opens with form to complete and all fields work as expected
-    5. 'Add recipe' button adds to the database and user is directed to the correct relevant recipe page, with feedback confirming the recipe has been added.
-    6. Edit button opens the edit_recipe page with form pre-populated with existing information.
-    7. 'Save Changes' button updates database with the changes made and user is directed to the correct, relevant page, with feedback confirming the recipe has been updated.
-    8. Delete button produces a modal to confirm user wants to proceed. If selects ok the user receives feedback confirming the deletion.
-    9. All pages work on different size screens, different browsers and devices
+1. All navbar links work.
+1. Home/Category page loads a 'Random recipe' of the correct food category. Check all 5.
+1. All accordians work as expected across all 5 category html pages.
+1. 'Add recipe' page opens with form to complete and all fields work as expected
+1. 'Add recipe' button adds to the database and user is directed to the correct relevant recipe page, with feedback confirming the recipe has been added.
+1. Edit button opens the edit_recipe page with form pre-populated with existing information.
+1. 'Save Changes' button updates database with the changes made and user is directed to the correct, relevant page, with feedback confirming the recipe has been updated.
+1. Delete button produces a modal to confirm user wants to proceed. If selects ok the user receives feedback confirming the deletion.
+1. All pages work on different size screens, different browsers and devices
 
-- #### Outcomes
+### Outcomes
 
 <img align = "center" width = "500px" height = "350px" src = "mealplanner/static/images/testing/manual-testing-matrix.png"> 
 
@@ -286,8 +287,8 @@ Apple Iphone SE 2022
 Apple iPad Pro 11  
 <img align = "center" width = "150px" height = "200px" src = "mealplanner/static/images/testing/bdrf-testing-ipadpro11-2021.png">  
 
-
-## Bugs
+---
+## **BUGS** ##
 1. If a user incorrectly input 60mins or over in the minute field for the cook time a DataError was produced.
 <img align = "center" width = "200px" height = "100px" src = "mealplanner/static/images/testing/bdrf-bug-over60mins.png">
 2. When editing a recipe the cook time wasnt pre-populating, remaining empty.
@@ -302,8 +303,38 @@ Apple iPad Pro 11
 ### Known Bugs
 No known bugs
 
+---
+## **DEPLOYMENT** ##
 
-## Deployment
+Deployment of the site was achieved by following the steps below :
+
+- Create a managed database with [ElephantSQL](https://www.elephantsql.com/)
+- Created a requirements.txt file by typing "pip3 freeze --local > requirements.txt" in the terminal which tells Heroku what dependencies are required.
+- Created a Procfile in the root directory of my project and inside the file added the following command; web: python run.py
+- Open __init__.py file and added an if statement before the line setting the SLQALCHEMY_DATABASE_URI and, in the else, set the value to reference a new variable, DATABASE_URL.
+- To ensure that SQLAlchemy can read my external database, the URL needs to start with “postgresql://”, to do this I made an addition to by else statement from the previous step to adjust the DATABASE_URL in case it starts with postgres://:
+- Save, add, commit and push to Github.
+- Logged in to Heroku and selected "Create New App".
+- Selected the input field "App Name" and gave app a unique name using dashes instead of spaces.
+- Selected the region closest to my location.
+- Clicked "Create App".
+- Selected "Settings" from the Heroku App menu.
+- Copy database URL from ElephantSQL.
+- On Heroku, add a Config Var called DATABASE_URL and paste the ElephantSQL database URL in the value, then click Add.
+- Add each of your other environment variables except DEVELOPMENT and DB_URL from the env.py file as a Config Var
+- Selected "Deploy" from the Heroku App menu.
+- Scrolled down the page and selected "Enable Automatic Deployment".
+- Selected Master Branch under "Branch Selected".
+- Clicked "Deploy Branch"
+- Next I needed to add my tables to my database. Click 'More' and select 'Run console'
+- Type python3 into the console and click Run
+- input in terminal - from mealplanner import db - db.create_all() - exit()
+-'Open app' will then open my app.
+
+### <ins>HOSTING</ins>
+
+The site is hosted on [Heroku](https://mealplanner-2.herokuapp.com/).
+
 
 ### GitHub Pages
 
@@ -327,41 +358,31 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
+- Navigate to my GitHub [repository](https://github.com/nddpj00/balanced-diet-menu-finder).
+- Click the "Code" button next to the Green Gitpod button.
+- Either, download the zip file or clone the repo using gh repo clone nddpj00/balanced-diet-menu-finder in the terminal.
+- Install the modules listed in the requirements.txt file using "python -m pip -r requirements.txt" in the terminal.
+- Create an env.py file in your application folder and add the following:
 
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-```
+    ```
+    import os
 
-7. Press Enter. Your local clone will be created.
+    os.environ.setdefault("IP", "0.0.0.0")
+    os.environ.setdefault("PORT", "5000")
+    os.environ.setdefault("SECRET_KEY", "********")
+    os.environ.setdefault("DEBUG", "False")
+    os.environ.setdefault("DEVELOPMENT", "True")
+    os.environ.setdefault("DB_URL", "postgresql:///mealplanner")
+    ```
 
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
+  You will need to update the above with  your own SECRET_KEY and YOUR ROOT info.
 
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+- The app can now be run locally by typing python run.py in the terminal and will be available in your browser using the address "http://localhost:5000".
 
-## Credits
 
-### Code
+## **CREDITS** ##
 
--   [Bootstrap5](https://getbootstrap.com/docs/5.0/examples/)   
-The main structure is based on the Bootstrap5 Grid system.  
-Buttons for styling and responsiveness  
--   [GoogleMap](https://www.google.co.uk/maps)  
-The map to depict the location of the results.  
--   [JSHint](https://jshint.com/)  
-Validating my Javascript code, cleaning it up and removing unnecessary semi-colons!
+
 
 
 
