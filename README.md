@@ -76,7 +76,8 @@ I wanted some vivid colours that come from produce so have I have used avocado g
 
    **Large Screen Wireframes**
 
-<img style="float:left" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes.png">
+|![alt](mealplanner/wireframes/bdrf-wireframes.png) |![alt](mealplanner/wireframes/bdrf-wireframes.png) | ![alt](mealplanner/wireframes/bdrf-wireframes.png)
+
 <img width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-addrecipe.png">
 <img style="float:right" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes-lg-recipe.png">
 
