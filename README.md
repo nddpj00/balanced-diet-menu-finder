@@ -90,7 +90,9 @@ I wanted some vivid colours that come from produce so have I have used avocado g
 
 ## The Database
 
-For the App the majority of the data is contained within the Recipe table.  The Category table is to allow grouping of the recipes but is still course related to the main recipes too.  The Cuisine table is there for future development, to allow filtration of the cuisine type of the recipe.
+1. For the App the majority of the data is contained within the Recipe table.  
+1. The Category table is to allow grouping of the recipes but is still course related to the main recipes too.
+1. The Cuisine table is there for future development, to allow filtration of the cuisine type of the recipe.
 
 <img align = "center" width = "300px" height = "200px" src = "mealplanner/wireframes/bdrf-databaseschema.png">
 
@@ -155,7 +157,8 @@ cuisine_id: <Integer>
 
 1. User login
 - This would allow others to use it for their purpose with *their* favourite recipes.
-- Users able to delete their own recipes and option to view only their recipes
+- Users able to delete their own recipes and option to view only their recipes.
+- Would ensure the security of the App. Preventing users deleting others recipes.
 
 2. Filter
 - Users able to filter recipes by more than just food group.  Cuisine, Healthy or family friendly.  This is the reason I've added 'Cuisine' information on the database but as yet, not used.
