@@ -6,7 +6,7 @@
 
 I love eating food, who doesn't? but also I love reading about it, I love learning about it and of course, I love cooking it too.  As such, I took it upon myself to devise a weekly meal plan for my small family and have been doing so for a while now.
 
-I aim for the meals to be healthy, balanced, interesting and of course tasty!  Sounds simple right?  
+My aim is for the meals to be healthy, balanced, interesting and of course tasty!  Sounds simple right?  
 
 But it's not... firstly it's very time-consuming. 
 
@@ -14,9 +14,9 @@ I turn to my long tried-and-tested recipes which can be found either online, in 
 
 Also, with so much information around about what makes a balanced, healthy, nutritious diet, it can feel confusing and overwhelming to say the least.  Who really knows if they're eating enough oily fish in their diet??
 
-OK to summarize why I've created the Balanced Diet Meal Finder. 
-- You have all your favourite recipes in one place, saving you time and effort.
-- Categorized into food groups. Vegetarian, White Meat, Red Meat, Oily Fish and White Fish to help you choose a nice balanced diet.
+OK to summarize, the two main reasons why I've created the Balanced Diet Meal Finder are; 
+- To have all your favourite recipes in one place, saving you time and effort.
+- Categorized recipes in to  food groups. Vegetarian, White Meat, Red Meat, Oily Fish and White Fish to help you choose a nice balanced diet.
 
 ---
 
@@ -43,7 +43,7 @@ This units project criteria was the perfect opportunity to move the data (recipe
 - :heavy_check_mark: *delete* my own recipes.
 - :heavy_check_mark: *view* a random recipe from a particular category.
 - :heavy_check_mark: quickly locate where the recipe is kept.
-- :heavy_check_mark: easily plan a balanced, healthy mealplan.
+- :heavy_check_mark: easily plan a balanced, healthy meal-plan.
 
 
 ### Design  
@@ -90,7 +90,7 @@ I wanted some vivid colours that come from produce so have I have used avocado g
 
 ## The Database
 
-For the App the majority of the data is contained within the Recipe table.  The Category table is to allow separation of the recipes but is of course related to the main recipes.  The Cuisine table is there for future development, to allow filtration of the cuisine type of the recipe.
+For the App the majority of the data is contained within the Recipe table.  The Category table is to allow grouping of the recipes but is still course related to the main recipes too.  The Cuisine table is there for future development, to allow filtration of the cuisine type of the recipe.
 
 <img align = "center" width = "300px" height = "200px" src = "mealplanner/wireframes/bdrf-databaseschema.png">
 
@@ -128,7 +128,7 @@ cuisine_id: <Integer>
 
 2. Add / Store a Recipe [**C**RUD]
 - Use a form to direct the user to easily add a recipe. 
-- Form looks for duplication and notifies via a flash message if duplicate exists.
+- Form looks for duplication and notifies user via a flash message if duplicate exists.
 - User to select a category via the dropdown to sort in to the correct recipe page.
 - Once submitted the user is directed to the recipe page of the category chosen, allowing them to see the added recipe, along with a flash message to give immediate and full feedback on data processes.
    
@@ -164,9 +164,9 @@ cuisine_id: <Integer>
 - Users to be able to search a specific ingredient.  
 
 
-## **Technologies Used** ##
+## **TECHNOLOGIES USED** ##
 
-### Languages Used
+### Languages
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
@@ -174,11 +174,10 @@ cuisine_id: <Integer>
 -   [Python](https://www.python.org/)
 
 
-### Frameworks, Libraries & Programs Used
+### Frameworks, Libraries & Programs
 
 1. [Flask 2.2.3](https://flask.palletsprojects.com/en/2.2.x/)
     - Micro web framework use for the main build of the database-backed app.
-
 1.  [Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
     - Templating engine used to pass data to render final document. Used to write code similar to Python within the html documents.
 1.  [SQLAlchemy 1.4.46](https://www.sqlalchemy.org/)
@@ -205,7 +204,7 @@ cuisine_id: <Integer>
 
 ### Validators
 
--  W3C Markup Validator complete without errors.
+-  W3C Markup Validator complete without errors except for the Jinja syntax.
 <img align = "center" width ="300px" height = 200px src = "mealplanner/static/images/testing/bdrf-testing-w3c-validator.png">
 
 -   W3C CSS Validator complete without errors.
@@ -244,13 +243,12 @@ cuisine_id: <Integer>
     5. Time. Though they take longer to set up initially, having a bespoke automated testing process will save time in the long run, due to how frequently they need to be run when maintaining and improving the site.
 
 
-
 ### Manual Test process  
 
   - The Test  
 1. All navbar links work.
 1. Home/Category page loads a 'Random recipe' of the correct food category. Check all 5.
-1. All accordions work as expected across all 5 category html pages.
+1. All accordions work as expected across all 5 category HTML pages.
 1. 'Add recipe' page opens with form to complete and all fields work as expected
 1. 'Add recipe' button adds to the database and user is directed to the correct relevant recipe page, with feedback confirming the recipe has been added.
 1. Edit button opens the edit_recipe page with form pre-populated with existing information.
@@ -264,9 +262,9 @@ cuisine_id: <Integer>
 
 I used a programme called BrowserStack to perform the tests. This is software provided as part of the course, included in the Student Developer pack.  This software allows you to load your site on a live environment on each device and browser.
 
-The application recommended that 1 x high-end, 1 x low-end device and a tablet is tested for each main manufacturer of smart devices.  I've tested Apple and Samsung devices of differing sizes.  
+The application recommended that 1 x high-end, 1 x low-end device and a tablet is tested for each main manufacturer of smart devices.  I tested Apple,Samsung and Google devices of differing size.  
 
-Also, I've tested the site on a broad cross-section of browsers.  Chrome, Edge, Safari and Firefox.
+Also, I've tested the site on a broad cross-section of browsers.  Chrome, Edge, Safari, Firefox and Opera.
 
 The site performed well across all devices and browsers. All links worked as expected.  Appearance and layout looked good on all devices too.
 
@@ -288,15 +286,17 @@ Apple iPad Pro 11
 ---
 ## **BUGS** ##
 1. If a user incorrectly input 60mins or over in the minute field for the cook time a DataError was produced.
-<img align = "center" width = "200px" height = "100px" src = "mealplanner/static/images/testing/bdrf-bug-over60mins.png">
-2. When editing a recipe the cook time wasn't pre-populating, remaining empty.
-3. If user clicks on 'Get random recipe' button, though it worked the variable stored the recipe.  Meaning if the user clicked it over & over again it would show the same recipe. 
-4.  When deploying my original app I ran in to a problem with the database.  It wasn't creating the database and linking to the app.  After many hours trying to resolve I copied over the code on to a new workspace and re-attempted the deployment.  Unfortunately my 'commits' will be linked to that original Repo ["mealplanner.2"](https://github.com/nddpj00/mealplanner.2)
+    <img align = "center" width = "200px" height = "100px" src = "mealplanner/static/images/testing/bdrf-bug-over60mins.png">
+1. When editing a recipe the cook time wasn't pre-populating, remaining empty.
+1. If user clicks on 'Get random recipe' button, though it worked, the variable stored the recipe.  Meaning if the user clicked it over & over again it would show the same recipe. 
+1.  When deploying my original app I ran in to a problem with the database.  It wasn't creating the database and linking to the app.  After many hours trying to resolve I decided to copy the code on to a new workspace and re-attempted the deployment.  Unfortunately my 'commits' will be linked to that original Repo ["mealplanner.2"](https://github.com/nddpj00/mealplanner.2)
 
 ## Fixes
 1. The dataerror was due to using the incorrect datatype I believe.  In the form I changed the type to "time" and this resolved it immediately.
-2. The data stored in the database was in the incorrect format.  By added 0 before the value on the html resolved this. ie value="0{{ recipe.cook_time }}" .
-3. I added some Javascript to reload the page on the 'close' button to allow a new recipe to be set as random.
+1. The data stored in the database was in the incorrect format.  By added 0 before the value on the html resolved this. ie value="0{{ recipe.cook_time }}" .
+1. I added some Javascript to reload the page on the 'close' button to allow a new recipe to be set as random.
+1. New workspace is this one and the deployment was successful.
+
 
 ### Known Bugs
 No known bugs
@@ -306,11 +306,11 @@ No known bugs
 
 Deployment of the site was achieved by following the steps below :
 
-- Create a managed database with [ElephantSQL](https://www.elephantsql.com/)
+- Create a managed database with [ElephantSQL](https://www.elephantsql.com/).
 - Created a requirements.txt file by typing "pip3 freeze --local > requirements.txt" in the terminal which tells Heroku what dependencies are required.
 - Created a Procfile in the root directory of my project and inside the file added the following command; web: python run.py
 - Open __init__.py file and added an if statement before the line setting the SLQALCHEMY_DATABASE_URI and, in the else, set the value to reference a new variable, DATABASE_URL.
-- To ensure that SQLAlchemy can read my external database, the URL needs to start with “postgresql://”, to do this I made an addition to by else statement from the previous step to adjust the DATABASE_URL in case it starts with postgres://:
+- To ensure that SQLAlchemy can read my external database, the URL needs to start with “postgresql://”, to do this I made an addition to the else statement from the previous step to adjust the DATABASE_URL in case it starts with postgres://:
 - Save, add, commit and push to Github.
 - Logged in to Heroku and selected "Create New App".
 - Selected the input field "App Name" and gave app a unique name using dashes instead of spaces.
@@ -334,29 +334,9 @@ Deployment of the site was achieved by following the steps below :
 The site is hosted on [Heroku](https://mealplanner-2.herokuapp.com/).
 
 
-### GitHub Pages
-
-The project was deployed to GitHub Pages using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively, Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now-published site [link](https://github.com) in the "GitHub Pages" section.
-
-### Forking the GitHub Repository
-
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
-
 ### Making a Local Clone
 
-- Navigate to my GitHub [repository](https://github.com/nddpj00/balanced-diet-menu-finder).
+- Navigate to my GitHub [GitHub Repository](https://github.com/nddpj00/balanced-diet-menu-finder).
 - Click the "Code" button next to the Green Gitpod button.
 - Either, download the zip file or clone the repo using gh repo clone nddpj00/balanced-diet-menu-finder in the terminal.
 - Install the modules listed in the requirements.txt file using "python -m pip -r requirements.txt" in the terminal.
@@ -386,7 +366,6 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 -  Tim Nelson from Code Institute for his walkthroughs of Thorin & Co and Taskmanager. These were a great resource when putting my app together and creating the databases.
 -   Anna Greaves from Code Institute for her instructions on deploying the app.
 -   All remaining content was written by the developer.
-
 
 
 ### Media
