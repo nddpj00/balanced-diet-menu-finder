@@ -367,8 +367,9 @@ The site is hosted on [Heroku](https://mealplanner-2.herokuapp.com/).
 ### Content
 
 -  Tim Nelson from Code Institute for his walkthroughs of Thorin & Co and Taskmanager. These were a great resource when putting my app together and creating the databases.
--   Anna Greaves from Code Institute for her instructions on deploying the app.
--   All remaining content was written by the developer.
+-  I took inspiration from the layout and features also contained in Tim Nelson's readme for his [2BN-Desserts Repo](https://github.com/TravelTimN/ci-milestone04-dcd/blob/main/README.md)
+-  Anna Greaves from Code Institute for her instructions on deploying the app.
+-  All remaining content was written by the developer.
 
 
 ### Media
