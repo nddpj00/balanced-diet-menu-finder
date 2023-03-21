@@ -72,10 +72,8 @@ def edit_recipe(recipe_id):
         recipe.recipe_notes = request.form.get("recipe_notes").capitalize()
         recipe.cook_time = request.form.get("cook_time")
         recipe.recipe_location = request.form.get("recipe_location")
-        recipe.family_friendly = bool
-        (True if request.form.get("family_friendly") else False)
-        recipe.recipe_healthy = bool
-        (True if request.form.get("recipe_healthy") else False)
+        recipe.family_friendly = bool(True if request.form.get("family_friendly") else False)
+        recipe.recipe_healthy = bool(True if request.form.get("recipe_healthy") else False)
         recipe.category_id = request.form.get("category_id")
         recipe.cuisine_id = request.form.get("cuisine_id")
         db.session.commit()

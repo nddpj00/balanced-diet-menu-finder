@@ -44,6 +44,8 @@ This units project criteria was the perfect opportunity to move the data (recipe
 - :heavy_check_mark: *edit* my own recipes.
 - :heavy_check_mark: *delete* my own recipes.
 - :heavy_check_mark: *view* a random recipe from a particular category.
+- :heavy_check_mark: quickly locate where the recipe is kept.
+- :heavy_check_mark: easily plan a balanced, healthy mealplan.
 
 
 ### Design  
@@ -76,16 +78,16 @@ I wanted some vivid colours that come from produce so have I have used avocado g
 
    **Large Screen Wireframes**
 
-|![alt](mealplanner/wireframes/bdrf-wireframes.png) |![alt](mealplanner/wireframes/bdrf-wireframes.png) | ![alt](mealplanner/wireframes/bdrf-wireframes.png)
 
+<img width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes.png">
 <img width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-addrecipe.png">
-<img style="float:right" width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes-lg-recipe.png">
+<img width = "250px" height = "200px" src = "mealplanner/wireframes/bdrf-wireframes-lg-recipe.png">
 
    **Mobile Screen Wireframes**
 
-<img style="float:left" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-home.png">
-<img  width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-add-recipe.png">
-<img  style="float:right" width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-recipe.png">
+<img width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-home.png">
+<img width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-add-recipe.png">
+<img width = "150px" height = "300px" src = "mealplanner/wireframes/bdrf-wireframe-mobile-recipe.png">
 
 
 ## The Database
@@ -211,8 +213,8 @@ cuisine_id: <Integer>
 -   W3C CSS Validator complete without errors.
 <img align = "center"  style= width:300px; height:200px src= "mealplanner/static/images/testing/bdrf-testing-wc3-css-validator.png">  
 
--   Code Institute Python Linter  showing no errors or warnings.
-<img align = "center"  style= width:300px; height:200px src= "mealplanner/static/images/testing/bdrf-testing-ci-python-linter.png">
+-   Code Institute Python Linter  showing 2 errors. E501 line too long.  I attempted to break up the line and indent on the line below but felt this only made it less clear.  
+<img align = "center"  style= width:300px; height:200px src= "mealplanner/static/images/testing/bdrf-testing-cipythonlinter.png">
 
 -   JSHint to Check Javascript. 2 Warnings about using 'let' of which I'm happy to ignore.
 <img align = "center"  style= width:300px; height:200px src= "mealplanner/static/images/testing/bdrf-testing-jshint.png">
@@ -261,11 +263,11 @@ cuisine_id: <Integer>
 
 I used a programme called Browserstack to perform the tests. This is software provided as part of the course, included in the Student Developer pack.  This software allows you to load your site on a live environment on each device and browser.
 
-The application recommended that 1 x high-end, 1 x low-end device and a tablet is tested for each main manufacturer of smart devices.  I've tested Apple, Samsung, and Google.  
+The application recommended that 1 x high-end, 1 x low-end device and a tablet is tested for each main manufacturer of smart devices.  I've tested Apple and Samsung devices of differing sizes.  
 
 Also, I've tested the site on a broad cross-section of browsers.  Chrome, Edge, Safari and Firefox.
 
-The site performed all across all devices and browsers. All links worked as expected.  Appearance and layout looked good on all devices too.
+The site performed well across all devices and browsers. All links worked as expected.  Appearance and layout looked good on all devices too.
 
 
 A small selection of screenshots showing the cross-browser testing.  
@@ -277,6 +279,8 @@ Apple Iphone 14
 <img align = "center" width = "100px" height = "200px" src = "mealplanner/static/images/testing/bdrf-testing-iphone14.png">  
 Samsung S21 Ultra  
 <img align = "center" width = "100px" height = "200px" src = "mealplanner/static/images/testing/bdrf-testing-s21ultra.png">  
+Apple Iphone SE 2022   
+<img align = "center" width = "80px" height = "150px" src = "mealplanner/static/images/testing/bdrf-testing-iphonese-small.png">  
 Apple iPad Pro 11  
 <img align = "center" width = "150px" height = "200px" src = "mealplanner/static/images/testing/bdrf-testing-ipadpro11-2021.png">  
 
