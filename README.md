@@ -4,31 +4,29 @@
 
 [View the live project here.](https://mealplanner-2.herokuapp.com/)
 
-I love food.  I mean I *really* love it.
-
-I love eating food, who doesnt? but also I love reading about it, I love learning about it and of course I love cooking it too.  As such I took it upon myself to devise a weekly meal plan for my small family and have been doing so for a while now.
+I love eating food, who doesn't? but also I love reading about it, I love learning about it and of course, I love cooking it too.  As such, I took it upon myself to devise a weekly meal plan for my small family and have been doing so for a while now.
 
 I aim for the meals to be healthy, balanced, interesting and of course tasty!  Sounds simple right?  
 
-But it's not... firstly it's very time consuming. 
+But it's not... firstly it's very time-consuming. 
 
-I turn to my long tried-and-tested recipes which can be found either online, in my numerous cookbooks (which are in no-particular-order), 10 year old scraps of paper pulled from a sunday paper supplements (covered in sauce and flattened tomatoes) or finally, and more recently, in those free binders given to you on your first subscription to Gusto or Hello Fresh.  This all takes time. 
+I turn to my long tried-and-tested recipes which can be found either online, in my numerous cookbooks (which are in no particular order), 10-year-old scraps of paper pulled from a Sunday paper supplements (covered in sauce and flattened tomatoes) or finally, and more recently, in those free binders given to you on your first subscription to Gusto or Hello Fresh.  This all takes time. 
 
-Also, with so much information around about what consists of a balanced, healthy, nutrious diet, it can feel confusing and overwhelming to say the least.  Who really knows if they're eating enough oily fish in their diet??
+Also, with so much information around about what makes a balanced, healthy, nutritious diet, it can feel confusing and overwhelming to say the least.  Who really knows if they're eating enough oily fish in their diet??
 
-OK to summarise why I've created the Balanced Diet Meal Finder. 
-- You have all your favourite recipes in one place, saving you time.
-- Categorised into food groups. Vegetarian, White Meat, Red Meat, Oily Fish and White Fish to help you choose a nice balanced diet.
+OK to summarize why I've created the Balanced Diet Meal Finder. 
+- You have all your favourite recipes in one place, saving you time and effort.
+- Categorized into food groups. Vegetarian, White Meat, Red Meat, Oily Fish and White Fish to help you choose a nice balanced diet.
 
 ---
 
 ## User Experience (UX)
 
-The project was created in order to fulfil the critera of the L5 Diploma in Web Application Development that I'm completing. This is for Unit 3: Back End Development.
+The project was created in order to fulfil the criteria of the L5 Diploma in Web Application Development that I'm completing. This is for Unit 3: Back End Development.
 
 The unit aims to provide knowledge and skills needed to build a Back end web application. Topics include data storage and data management using either relational or non-relational databases.
 
-The idea came several years ago but then it was in paper form.  I had started to try and jot down any recipes our family enjoyed, categorised into different food groups. Essentially it was a plastic folder with dividers, separating several bits of paper all with the aim of saving me time, but also ensuring we eat a balanced diet.  
+The idea came several years ago but then it was in paper form.  I had started to try and jot down any recipes our family enjoyed, categorized into different food groups. Essentially it was a plastic folder with dividers, separating several bits of paper all with the aim of saving me time, but also ensuring we eat a balanced diet.  
 
 This units project criteria was the perfect opportunity to move the data (recipes) on to a user-friendly app!
 
@@ -136,11 +134,11 @@ cuisine_id: <Integer>
    
 
 3. Read / View a Recipe [C**R**UD] 
-- Select via the Navbar food group of the recipe youre looking for. i.e Oily-fish
+- Select via the Navbar food group of the recipe you're looking for. i.e Oily-fish
 - See the time it takes to cook the recipe on the main header.
 - Icons to allow user to quickly ascertain if the recipe is healthy or family-friendly, along with a key.
-- When accordian card is open the user can view notes about the recipe, along with buttons to direct them to edit the recipe or delete it.
-- If the location of the recipe is a URL then a button will be present which contains a link to the exteral webpage. If the recipe is in a cookbook or supplement then details such as cookbook and page number will be found here instead.
+- When accordion card is open the user can view notes about the recipe, along with buttons to direct them to edit the recipe or delete it.
+- If the location of the recipe is a URL then a button will be present which contains a link to the external webpage. If the recipe is in a cookbook or supplement then details such as cookbook and page number will be found here instead.
 -From the home page / (categories.html) the user has the option to click on the 'Get Random recipe' button which selects a random recipe from that respective food group. Great if in a hurry or feeling indecisive!
 
 4. Update/ Edit a Recipe [CR**U**D]
@@ -151,9 +149,9 @@ cuisine_id: <Integer>
 5. Delete a Recipe [CRU**D**]
 - Click on the delete button of the recipe to delete it from the database.
 - Defensive programming modal opens to confirm user wants to proceed with the deletion.
-- If confirmaed the user is directed back to the page where the recipe was, along with a flash message giving immediate feedback its been deleted.
+- If confirmed the user is directed back to the page where the recipe was, along with a flash message giving immediate feedback its been deleted.
 
-###  Features to impliment in the future
+###   Features to implement in the future
 
 1. User login
 - This would allow others to use it for their purpose with *their* favourite recipes.
@@ -188,7 +186,7 @@ cuisine_id: <Integer>
 1.  [Psycopg2 2.9.5](https://pypi.org/project/psycopg2/)
     - PostgresSQL database adapter for Python.
 1.  [ElephantSQL](https://www.elephantsql.com/)
-    - To host my PostgreSQL databasee
+    - To host my PostgreSQL database
 1.  [Heroku-22](https://www.heroku.com/)
     - As the hosting platform for the App.
 1.  [Bootstrap 5.3.0:](https://getbootstrap.com/docs/5.0/)
@@ -234,7 +232,7 @@ cuisine_id: <Integer>
 - I opted to **manually** test my site.  The reasons are -  
 
     1. As the sole developer I can quickly carry out tests as I go and can obtain immediate results from the test.
-    2. As the main purpose of the site is to learn about Back End Development, show understanding and gain a qualification; and won't need to be maintained in the long term, I felt the time it would take to build an automated testing process was unnecessary on this occasion.  In a real-world situation, the use of a test framework, such as Jest would be invaluable to ensure the continiuous integrity of the site.
+    2. As the main purpose of the site is to learn about Back End Development, show understanding and gain a qualification; and won't need to be maintained in the long term, I felt the time it would take to build an automated testing process was unnecessary on this occasion.  In a real-world situation, the use of a test framework, such as Jest would be invaluable to ensure the continuous integrity of the site.
     3. UX testing. Important to the overall usability of the site and can only be carried out via manual testing. Automated testing lacks human observation and cognitive abilities.
 
 - Reasons why I would use Automated Testing in the future for other projects.
@@ -242,7 +240,7 @@ cuisine_id: <Integer>
     1. Larger scale site or application that may have an increased amount of functionality and code. Manual testing would take too long.
     2. Working in a team. Possibly no one person with in-depth knowledge of how the whole site should work and perform. Automated tests would allow anyone to run them.
     3. Continual code added to the site. Automated tests can be run after every addition, ensuring no disruption to the existing code.
-    4. Higher accuracy. Important if the site is in the public domain and linked to an organisation. To avoid deprecation of the 'brand' due to a poor website.
+    4. Higher accuracy. Important if the site is in the public domain and linked to an organization. To avoid deprecation of the 'brand' due to a poor website.
     5. Time. Though they take longer to set up initially, having a bespoke automated testing process will save time in the long run, due to how frequently they need to be run when maintaining and improving the site.
 
 
@@ -252,7 +250,7 @@ cuisine_id: <Integer>
   - The Test  
 1. All navbar links work.
 1. Home/Category page loads a 'Random recipe' of the correct food category. Check all 5.
-1. All accordians work as expected across all 5 category html pages.
+1. All accordions work as expected across all 5 category html pages.
 1. 'Add recipe' page opens with form to complete and all fields work as expected
 1. 'Add recipe' button adds to the database and user is directed to the correct relevant recipe page, with feedback confirming the recipe has been added.
 1. Edit button opens the edit_recipe page with form pre-populated with existing information.
@@ -264,7 +262,7 @@ cuisine_id: <Integer>
 
 <img align = "center" width = "500px" height = "350px" src = "mealplanner/static/images/testing/manual-testing-matrix.png"> 
 
-I used a programme called Browserstack to perform the tests. This is software provided as part of the course, included in the Student Developer pack.  This software allows you to load your site on a live environment on each device and browser.
+I used a programme called BrowserStack to perform the tests. This is software provided as part of the course, included in the Student Developer pack.  This software allows you to load your site on a live environment on each device and browser.
 
 The application recommended that 1 x high-end, 1 x low-end device and a tablet is tested for each main manufacturer of smart devices.  I've tested Apple and Samsung devices of differing sizes.  
 
@@ -291,12 +289,12 @@ Apple iPad Pro 11
 ## **BUGS** ##
 1. If a user incorrectly input 60mins or over in the minute field for the cook time a DataError was produced.
 <img align = "center" width = "200px" height = "100px" src = "mealplanner/static/images/testing/bdrf-bug-over60mins.png">
-2. When editing a recipe the cook time wasnt pre-populating, remaining empty.
+2. When editing a recipe the cook time wasn't pre-populating, remaining empty.
 3. If user clicks on 'Get random recipe' button, though it worked the variable stored the recipe.  Meaning if the user clicked it over & over again it would show the same recipe. 
 4.  When deploying my original app I ran in to a problem with the database.  It wasn't creating the database and linking to the app.  After many hours trying to resolve I copied over the code on to a new workspace and re-attempted the deployment.  Unfortunately my 'commits' will be linked to that original Repo ["mealplanner.2"](https://github.com/nddpj00/mealplanner.2)
 
 ## Fixes
-1. The dataerror was due to using the incorrect datatype I believe.  In the form I chaned the type to "time" and this resolved it immediately.
+1. The dataerror was due to using the incorrect datatype I believe.  In the form I changed the type to "time" and this resolved it immediately.
 2. The data stored in the database was in the incorrect format.  By added 0 before the value on the html resolved this. ie value="0{{ recipe.cook_time }}" .
 3. I added some Javascript to reload the page on the 'close' button to allow a new recipe to be set as random.
 
@@ -401,3 +399,5 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 -   My Mentor for continuous helpful feedback.
 
 -   EKC course facilitator, Rachel Furlong for introducing me to many new concepts and software and lots of great advice.
+
+-   All those clever people at the Code Institute tutor support that pointed me in the right direction.

@@ -55,7 +55,7 @@ def add_recipe():
             else:
                 return redirect("/white-fish")
         except IntegrityError as e:
-            assert isinstance(e.orig, UniqueViolation)  # proves the exception
+            assert isinstance(e.orig, UniqueViolation)
             flash("ERROR : Oops this recipe has already been added")
             db.session.rollback()
     return render_template("add_recipe.html", categories=categories,

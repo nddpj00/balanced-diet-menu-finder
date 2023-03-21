@@ -16,8 +16,10 @@
 {% endif %}
 {% endwith %}
 
+<!-- Form to add a recipe -->
 <div class="container" id="recipeCont">
     <form class="row g-3 needs-validation" novalidate method="POST" action="{{ url_for('add_recipe') }}">
+
         <!-- recipe name -->
         <div class="row mb-3">
             <div class="col-1">
@@ -45,7 +47,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- recipe location -->
         <div class="row mb-3">
@@ -107,11 +108,6 @@
                 <label for="category_id" class="form label"></label>
             </div> 
         </div>
-        
-
-
-
-
 
         <!-- family friendly -->
         <div class="row mb-4">
@@ -123,6 +119,7 @@
                 <input class="form-check-input" name="family_friendly" type="checkbox" id="family_friendly">
             </div>
         </div>
+
         <!-- healthy -->
         <div class="row mb-4">
             <div class="col-1 ">
@@ -133,7 +130,6 @@
                 <input class="form-check-input" name="recipe_healthy" type="checkbox" id="recipe_healthy">
             </div>
         </div>
-
 
         <!-- submit button -->
         <div class="d-grid col-6 mx-auto">

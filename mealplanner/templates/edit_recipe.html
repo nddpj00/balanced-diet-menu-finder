@@ -5,7 +5,6 @@
     <h1 class="center-align">Edit Recipe</h1>
 </div>
 
-
 <div class="container" id="recipeCont">
     <form class="row g-3" method="POST" action="{{ url_for('edit_recipe', recipe_id = recipe.id) }}">
         <!-- recipe name -->
@@ -36,7 +35,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- recipe location -->
         <div class="row mb-3">
@@ -89,7 +87,6 @@
             </div>
         </div>
 
-
         <!-- category id -->
         <div class="row">
             <div class="col-1">
@@ -110,10 +107,6 @@
             </div>
         </div>
 
-
-
-
-
         <!-- family friendly -->
         <div class="row mb-4">
             <div class="col-1 ">
@@ -129,6 +122,7 @@
                 {% endif %}
             </div>
         </div>
+
         <!-- healthy -->
         <div class="row mb-4">
             <div class="col-1 ">
@@ -145,16 +139,13 @@
             </div>
         </div>
 
-
         <!-- edit button -->
         <div class="d-grid col-6 mx-auto">
             <button type="submit" class="btn btn-lg">
                 Save changes <i class="fas fa-plus-square right"></i>
             </button>
-            
+
         </div>
-
-
     </form>
 </div>
 {% endblock %}
