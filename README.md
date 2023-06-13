@@ -1,4 +1,4 @@
-# [Balanced Diet Meal Finder](https://mealplanner-2.herokuapp.com/)
+# [Balanced Diet Recipe Finder](https://mealplanner-2.herokuapp.com/)
 
 ![mockup](mealplanner/wireframes/bdrf-mockup.png)
 
